@@ -1,0 +1,23 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="400" height="400"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+
+    //Hace un rectángulo
+    contexto.rect(0, 0, lienzo.width, lienzo.height);
+
+    //Gradiente de cambio de color
+    let gradiente = contexto.createLinearGradient(0, 0, lienzo.width, lienzo.height);
+    gradiente.addColorStop(0, '#000000');  //Punto inicial de primer color 0%
+    gradiente.addColorStop(1, '#FFFFFF');  //Punto final de último color  100%
+    contexto.fillStyle = gradiente;
+    contexto.fill(); //Rellena
+</script>
+</body>
+</html>

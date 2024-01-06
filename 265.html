@@ -1,0 +1,40 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="400" height="400"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+
+    contexto.lineWidth = 30; //Ancho de la línea
+    contexto.strokeStyle = 'green'; //Color
+
+    //Genera dos líneas y las junta
+    contexto.beginPath();
+    contexto.moveTo(10, 20);
+    contexto.lineTo(150, 90); //Línea 1
+    contexto.lineTo(270, 10); //Línea 2
+    contexto.lineJoin = 'round'; //miter, round, bevel
+    contexto.stroke();
+
+    //Genera dos líneas y las junta
+    contexto.beginPath();
+    contexto.moveTo(10, 80);
+    contexto.lineTo(150, 150); //Línea 1
+    contexto.lineTo(270, 70); //Línea 2
+    contexto.lineJoin = 'miter'; //miter, round, bevel
+    contexto.stroke();
+
+    //Genera dos líneas y las junta
+    contexto.beginPath();
+    contexto.moveTo(10, 140);
+    contexto.lineTo(150, 210); //Línea 1
+    contexto.lineTo(270, 130); //Línea 2
+    contexto.lineJoin = 'bevel'; //miter, round, bevel
+    contexto.stroke();
+</script>
+</body>
+</html>

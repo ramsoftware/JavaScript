@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="300" height="300"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+
+    let posX = lienzo.width / 2;  //Centro del canvas en X
+    let posY = lienzo.height / 2; //Centro del canvas en Y
+    let Radio = 100; //Radio del círculo
+    let AnguloInicio = 0; //Angulo inicial (0 grados) en radianes
+    let AnguloFinal = 360 * Math.PI / 180; //Angulo final (360 grados) en radianes
+    let DibujaContraReloj = false;
+
+    contexto.beginPath();
+    contexto.arc(posX, posY, Radio, AnguloInicio, AnguloFinal, DibujaContraReloj);
+    contexto.lineWidth = 10; //Ancho de la línea
+    contexto.strokeStyle = 'green'; //Color
+    contexto.stroke();
+</script>
+</body>
+</html>

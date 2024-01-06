@@ -1,0 +1,38 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="400" height="400"></canvas>
+<script>
+    //Funciones para hacer gráficos
+
+    //Captura el lienzo
+    let lienzo = document.getElementById('milienzo');
+
+    //Captura el contexto (siempre es en 2d)
+    let contexto = lienzo.getContext('2d');
+
+    contexto.beginPath(); //Inicia el camino para dibujar
+    contexto.moveTo(50, 70); //Mueve el cursor a la posición X=50, Y=70
+    contexto.lineTo(140, 250); //Hace una línea entre (50,70) - (140,250)
+    contexto.lineWidth = 10; //Grosor de esa línea
+    contexto.strokeStyle = rgbToHexadecimal(19, 163, 204); //Color de la línea
+    contexto.stroke(); //Hace visible la línea
+
+    //Convierte los números RGB (Red, Green, Blue) en su equivalente hexadecimal de color
+    function rgbToHexadecimal(R, G, B) {
+        return "#" + Hexadec(R) + Hexadec(G) + Hexadec(B);
+    }
+
+    //Convierte a Hexadecimal
+    function Hexadec(num) {
+        num = parseInt(num, 10);
+        if (isNaN(num)) return "00";
+        num = Math.max(0, Math.min(num, 255));
+        return "0123456789ABCDEF".charAt((num - num % 16) / 16) + "0123456789ABCDEF".charAt(num % 16);
+    }
+</script>
+</body>
+</html>

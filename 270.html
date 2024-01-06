@@ -1,0 +1,22 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="600" height="600"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+
+    contexto.beginPath(); //Inicia el camino
+
+    //Ilusión de curva con líneas
+    for (let mover = 0; mover <= 600; mover += 10) {
+        contexto.moveTo(0, mover);
+        contexto.lineTo(mover, 600);
+    }
+    contexto.stroke();
+</script>
+</body>
+</html>

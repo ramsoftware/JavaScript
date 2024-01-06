@@ -1,0 +1,21 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="400" height="400"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+
+    //Dibuja varias líneas horizontales
+    contexto.beginPath(); //Inicia el camino
+    for (let coordY = 10; coordY <= 500; coordY += 10) {
+        contexto.moveTo(5, coordY);
+        contexto.lineTo(600, coordY);
+    }
+    contexto.stroke();
+</script>
+</body>
+</html>

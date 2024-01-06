@@ -1,0 +1,29 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="400" height="400"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+
+    //Hace un rectángulo
+    contexto.rect(0, 0, lienzo.width, lienzo.height);
+
+    /* Crea un gradiente de color de variación vertical */
+    let gradiente = contexto.createLinearGradient(0, lienzo.height / 2, lienzo.width, lienzo.height / 2);
+
+    //Diferentes colores
+    gradiente.addColorStop(0, '#ABCDEF');  //Punto inicial de primer color
+    gradiente.addColorStop(0.2, '#BCD123');
+    gradiente.addColorStop(0.4, '#571ACB');
+    gradiente.addColorStop(0.6, '#C1B2D3');
+    gradiente.addColorStop(0.8, '#F1C5C2');
+    gradiente.addColorStop(1, '#012345');  //Punto final de último color
+    contexto.fillStyle = gradiente;
+    contexto.fill(); //Rellena
+</script>
+</body>
+</html>

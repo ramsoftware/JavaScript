@@ -1,0 +1,43 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="400" height="400"></canvas>
+<script>
+    //Captura el lienzo
+    let lienzo = document.getElementById('milienzo');
+
+    //Captura el contexto (siempre es en 2d)
+    let contexto = lienzo.getContext('2d');
+
+    //Línea 1
+    contexto.beginPath(); //Inicia el camino para dibujar
+    contexto.lineWidth = 20; //Grosor de esa línea
+    contexto.strokeStyle = '#8A2BE2'; //Color de la línea
+    contexto.moveTo(50, 20); //Mueve el cursor a la posición X=50, Y=20
+    contexto.lineTo(50, 250); //Hace una línea entre (50,20) - (50,250)
+    contexto.lineCap = 'butt'; //Cierra extremos con butt
+    contexto.stroke(); //Hace visible la línea
+
+    //Línea 2 (misma longitud de Línea 1)
+    contexto.beginPath(); //Inicia el camino para dibujar
+    contexto.lineWidth = 20; //Grosor de esa línea
+    contexto.strokeStyle = '#8A2BE2'; //Color de la línea
+    contexto.moveTo(80, 20); //Mueve el cursor a la posición X=80, Y=20
+    contexto.lineTo(80, 250); //Hace una línea entre (80,20) - (80,250)
+    contexto.lineCap = 'square'; //Cierra extremos con square
+    contexto.stroke(); //Hace visible la línea
+
+    //Línea 3 (misma longitud de Línea 1)
+    contexto.beginPath(); //Inicia el camino para dibujar
+    contexto.lineWidth = 20; //Grosor de esa línea
+    contexto.strokeStyle = '#8A2BE2'; //Color de la línea
+    contexto.moveTo(110, 20); //Mueve el cursor a la posición X=110, Y=20
+    contexto.lineTo(110, 250); //Hace una línea entre (110,20) - (110,250)
+    contexto.lineCap = 'round'; //Cierra extremos con square
+    contexto.stroke(); //Hace visible la línea
+</script>
+</body>
+</html>

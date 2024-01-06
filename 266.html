@@ -1,0 +1,28 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="400" height="400"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+
+    contexto.lineWidth = 5; //Ancho de la línea
+    contexto.strokeStyle = 'green'; //Color
+
+    //Hace varias líneas contínuas
+    contexto.beginPath();
+    contexto.moveTo(20, 30);
+    contexto.lineTo(250, 190); //Línea 1
+    contexto.lineTo(170, 50); //Línea 2
+    contexto.lineTo(280, 120); //Línea 3
+
+    //Hace una línea donde termina la línea 3 y empieza la línea 1
+    contexto.closePath();
+
+    contexto.stroke(); //Dibuja
+</script>
+</body>
+</html>

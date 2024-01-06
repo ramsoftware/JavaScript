@@ -1,0 +1,22 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="300" height="300"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+
+    contexto.beginPath();
+
+    contexto.moveTo(50, 20); //Punto inicial
+    contexto.quadraticCurveTo(20, 100, 200, 20); //Punto de control y punto final
+
+    contexto.lineWidth = 5; //Ancho de la línea
+    contexto.strokeStyle = 'green'; //Color
+    contexto.stroke();
+</script>
+</body>
+</html>

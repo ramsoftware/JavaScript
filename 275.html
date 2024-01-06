@@ -1,0 +1,34 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="300" height="300"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+    contexto.lineWidth = 5; //Ancho de la línea
+
+    IniciaElementoGrafico(contexto, 'green', 10, 20);
+    contexto.bezierCurveTo(30, 280, 120, 5, 290, 25);
+    contexto.stroke();
+
+    IniciaElementoGrafico(contexto, 'blue', 290, 25);
+    contexto.lineTo(150, 90);
+    contexto.stroke();
+
+    IniciaElementoGrafico(contexto, 'black', 150, 90);
+    contexto.quadraticCurveTo(320, 250, 200, 20);
+    contexto.stroke();
+
+    //Esta función ahorra tener que repetir instrucciones cada vez
+    //que se quiera dibujar un nuevo objeto
+    function IniciaElementoGrafico(contexto, quecolor, posX, posY) {
+        contexto.beginPath();
+        contexto.strokeStyle = quecolor;
+        contexto.moveTo(posX, posY);
+    }
+</script>
+</body>
+</html>
