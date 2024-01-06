@@ -1,0 +1,18 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Captura el error
+    let expresion = prompt("Escriba expresión algebraica");
+    try {
+        let valor = eval(expresion);
+        document.write("Valor calculado es: " + valor);
+    } catch (errordetectado) {
+        document.write("Mensaje de error: " + errordetectado.message);
+    }
+</script>
+</body>
+</html>

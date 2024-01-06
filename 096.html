@@ -1,0 +1,18 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Verificar si un número es legal o no
+    let dividendo = parseInt(prompt("Digite dividendo"));
+    let divisor = parseInt(prompt("Digite divisor"));
+    let resultado = dividendo / divisor;
+    if (isFinite(resultado)) //Verifica si el resultado es un número legal
+        document.write("Valor correcto: " + resultado);
+    else
+        document.write("Número no legal: " + resultado);
+</script>
+</body>
+</html>

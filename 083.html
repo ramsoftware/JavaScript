@@ -1,0 +1,19 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Convertir a binario
+    ConvierteBinario(70);
+
+    function ConvierteBinario(numero) {
+        if (numero !== 0) {
+            ConvierteBinario(Math.floor(numero / 2));
+            document.write(numero % 2);
+        }
+    }
+</script>
+</body>
+</html>

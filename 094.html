@@ -1,0 +1,24 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Uso de isNaN
+    document.write(isNaN(891) + "<br>"); //false
+    document.write(isNaN(-7.19) + "<br>"); //false
+    document.write(isNaN(79 + 21) + "<br>"); //false
+    document.write(isNaN(0) + "<br>"); //false
+    document.write(isNaN('888') + "<br>"); //false
+    document.write(isNaN('Probar') + "<br>"); //true
+    document.write(isNaN('2019/01/13') + "<br>"); //true
+    document.write(isNaN('') + "<br>"); //false
+    document.write(isNaN(true) + "<br>"); //false
+    document.write(isNaN(undefined) + "<br>"); //true
+    document.write(isNaN('NaN') + "<br>"); //true
+    document.write(isNaN(NaN) + "<br>"); //true
+    document.write(isNaN(0 / 0) + "<br>"); //true
+</script>
+</body>
+</html>

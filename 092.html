@@ -1,0 +1,20 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    /* Variable aleatoria
+       Distribución uniforme. Generar un número entero entre A y B
+       variable = r * (B - A) + A	 */
+    let A = 10;
+    let B = 50;
+    for (let cont = 1; cont <= 100; cont++) {
+        let r = Math.random();
+        let variable = r * (B - A) + A;
+        document.write(variable + ", ");
+    }
+</script>
+</body>
+</html>

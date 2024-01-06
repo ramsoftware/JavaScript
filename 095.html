@@ -1,0 +1,17 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Chequea si existe el NaN (Not a Number)
+    let numero = parseFloat(prompt("Digite número"));
+    let valor = Math.asin(numero);
+    if (isNaN(valor))
+        document.write("Valor erróneo para arcoseno");
+    else
+        document.write("Arcoseno es: " + valor);
+</script>
+</body>
+</html>
