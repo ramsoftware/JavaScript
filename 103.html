@@ -1,0 +1,24 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    let valores = [];
+    valores.push(15000);
+    valores.push(18000);
+    valores.push(34000);
+    valores.push(17000);
+    valores.push(8000);
+
+    //Operación con vectores: acumulado
+    let acumula = 0;
+    for (let cont = 0; cont < valores.length; cont++) {
+        acumula += valores[cont];
+    }
+
+    document.write("Acumulado es: " + acumula);
+</script>
+</body>
+</html>

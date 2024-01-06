@@ -1,0 +1,24 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    let letras = ['r', 'v', 'e', 'g', 't', 'u', 'd', 'f', 'f', 'y', 'v', 'm', 'z', 'v'];
+    document.write("Original: " + letras + "<br>");
+    OrdenarInsercion(letras);
+    document.write("Ordenado: " + letras + "<br>");
+
+    //Algoritmo de ordenación por inserción
+    function OrdenarInsercion(arreglo) {
+        for (let i = 0, j, tmp; i < arreglo.length; ++i) {
+            tmp = arreglo[i];
+            for (j = i - 1; j >= 0 && arreglo[j] > tmp; --j)
+                arreglo[j + 1] = arreglo[j];
+            arreglo[j + 1] = tmp;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Operación con vectores: promedio
+    let valores = [];
+    valores.push(15000);
+    valores.push(18000);
+    valores.push(34000);
+    valores.push(17000);
+    valores.push(8000);
+
+    //Acumula los valores
+    let acumula = 0;
+    for (let cont = 0; cont < valores.length; cont++) {
+        acumula += valores[cont];
+    }
+
+    //Calcula el promedio
+    let promedio = acumula / valores.length;
+    document.write("Promedio es: " + promedio);
+</script>
+</body>
+</html>

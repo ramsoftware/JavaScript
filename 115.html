@@ -1,0 +1,28 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    let letras = ['r', 'v', 'e', 'g', 't', 'u', 'd', 'f', 'f', 'y', 'v'];
+    document.write("Original: " + letras + "<br>");
+    OrdenarSeleccion(letras);
+    document.write("Ordenado: " + letras + "<br>");
+
+    //Ordenación por selección
+    function OrdenarSeleccion(arreglo) {
+        for (let i = 0; i < arreglo.length - 1; i++) {
+            let tmp = i;
+            for (let j = i + 1; j < arreglo.length; j++)
+                if (arreglo[j] < arreglo[tmp])
+                    tmp = j;
+
+            let temporal = arreglo[tmp];
+            arreglo[tmp] = arreglo[i];
+            arreglo[i] = temporal;
+        }
+    }
+</script>
+</body>
+</html>

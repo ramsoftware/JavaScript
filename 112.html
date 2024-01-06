@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    let letras = ['r', 'v', 'e', 'g', 't', 'u', 'd', 'f', 'f', 'y', 'v'];
+    document.write("Original: " + letras + "<br>");
+    OrdenarBurbuja(letras);
+    document.write("Ordenado: " + letras + "<br>");
+
+    //Ordenación por el método de burbuja
+    function OrdenarBurbuja(arreglo) {
+        for (let i = 0; i < arreglo.length - 1; i++)
+            for (let j = 0; j < arreglo.length - i - 1; j++)
+                if (arreglo[j] > arreglo[j + 1]) {
+                    let aux = arreglo[j];
+                    arreglo[j] = arreglo[j + 1];
+                    arreglo[j + 1] = aux;
+                }
+    }
+</script>
+</body>
+</html>

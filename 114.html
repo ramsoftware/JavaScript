@@ -1,0 +1,30 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    let datos = [-363, -1793, -2601, -2541, 6376, 6053, 503, 1601, -2994];
+    document.write("Original: " + datos + "<br>");
+    OrdenarBurbujaMejorado(datos);
+    document.write("Ordenado: " + datos + "<br>");
+
+    //Ordenación por método de burbuja mejorado
+    function OrdenarBurbujaMejorado(arreglo) {
+        let intercambio;
+        do {
+            intercambio = false;
+            for (let i = 0; i < arreglo.length - 1; i++) {
+                if (arreglo[i] > arreglo[i + 1]) {
+                    let temporal = arreglo[i];
+                    arreglo[i] = arreglo[i + 1];
+                    arreglo[i + 1] = temporal;
+                    intercambio = true;
+                }
+            }
+        } while (intercambio);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Arreglo de números enteros
+    let datos = [-363, -1793, -2601, -2541, 6376, 6053, 503, 1601, -2994, 6480, 998];
+    document.write("Original: " + datos + "<br>");
+    OrdenarBurbuja(datos);
+    document.write("Ordenado: " + datos + "<br>");
+
+    //Ordenación por burbuja
+    function OrdenarBurbuja(arreglo) {
+        for (let i = 0; i < arreglo.length - 1; i++)
+            for (let j = 0; j < arreglo.length - i - 1; j++)
+                if (arreglo[j] > arreglo[j + 1]) {
+                    let aux = arreglo[j];
+                    arreglo[j] = arreglo[j + 1];
+                    arreglo[j + 1] = aux;
+                }
+    }
+</script>
+</body>
+</html>

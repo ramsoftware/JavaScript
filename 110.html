@@ -1,0 +1,31 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    // ¿Función genérica para hallar menor y mayor valor?
+    let pagar = [1120, 6040, 1570, 5205, 3147, 7361, 166, 1002, 1572, 6567];
+
+    let menor = BuscaMenorValor(pagar);
+    let mayor = BuscaMayorValor(pagar);
+    document.write("Menor cuantía es: " + menor);
+    document.write("<br>Mayor cuantía es: " + mayor);
+
+    function BuscaMenorValor(arreglo) { //Función genérica
+        let minimo = arreglo[0];
+        for (let cont = 1; cont < arreglo.length; cont++)
+            if (arreglo[cont] < minimo) minimo = arreglo[cont];
+        return minimo;
+    }
+
+    function BuscaMayorValor(arreglo) { //Función genérica
+        let maximo = arreglo[0];
+        for (let cont = 1; cont < arreglo.length; cont++)
+            if (arreglo[cont] > maximo) maximo = arreglo[cont];
+        return maximo;
+    }
+</script>
+</body>
+</html>

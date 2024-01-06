@@ -1,0 +1,32 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    // Separe los elementos pares e impares de una lista, y retorne ambas listas
+    let numeros = [10, 13, 20, 24, 23, 2, 23, 29, 5, 19, 8, 6, 16, 2, 6, 27];
+    let pares = retornaPares(numeros);
+    let impares = retornaImpares(numeros);
+    document.write("Pares: " + pares + "<br>");
+    document.write("Impares: " + impares + "<br>");
+
+    function retornaPares(valores) {
+        let par = [];
+        for (let cont = 0; cont < valores.length; cont++)
+            if (valores[cont] % 2 === 0)
+                par.push(valores[cont]);
+        return par;
+    }
+
+    function retornaImpares(valores) {
+        let impar = [];
+        for (let cont = 0; cont < valores.length; cont++)
+            if (valores[cont] % 2 !== 0)
+                impar.push(valores[cont]);
+        return impar;
+    }
+</script>
+</body>
+</html>
