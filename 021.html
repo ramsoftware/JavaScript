@@ -1,0 +1,17 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Cálculo del área de un triángulo según sus lados
+    let ladoA = parseFloat(prompt("Longitud Lado A"));
+    let ladoB = parseFloat(prompt("Longitud Lado B"));
+    let ladoC = parseFloat(prompt("Longitud Lado C"));
+    let s = (ladoA + ladoB + ladoC) / 2;
+    let area = Math.sqrt(s * (s - ladoA) * (s - ladoB) * (s - ladoC));
+    document.write("Área es: " + area);
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    let ladoA = parseInt(prompt("Lado A:"));
+    let ladoB = parseInt(prompt("Lado B:"));
+    let ladoC = parseInt(prompt("Lado C:"));
+    if (ladoA === ladoB && ladoB === ladoC) {
+        document.write("Es equilátero");
+    } else if (ladoA !== ladoB && ladoA !== ladoC && ladoB !== ladoC) {
+        document.write("Es escaleno");
+    } else {
+        document.write("Es isósceles");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Área y volumen del cilindro
+    let radio = parseFloat(prompt("Radio del círculo de la tapa"));
+    let altura = parseFloat(prompt("Altura del cilindro"));
+    let area = 2 * Math.PI * radio * (altura + radio);
+    let volumen = Math.PI * radio * radio * altura;
+    document.write("Área es: " + area);
+    document.write("<br>Volumen es: " + volumen);
+</script>
+</body>
+</html>
