@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    function formularioenvia() {
+        alert("activo envío");
+    }
+
+    function abajo() {
+        alert("abajo");
+    }
+
+    function presiona() {
+        alert("presiona");
+    }
+</script>
+<form id="formulario" method="post" onsubmit="formularioenvia()">
+    <input type="text" id="texto" onkeypress="presiona()" onkeydown="abajo()"/>
+    <input type="submit" id="boton" value="envía"/>
+</form>
+</body>
+</html>

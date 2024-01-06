@@ -1,0 +1,22 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Al presionar el botón se llama a esta función:
+
+    //Esta función toma el hipervínculo y lo cambia
+    function enlazarmipagina() {
+        //Toma el control del objeto hipervínculo
+        let enlace = document.getElementById("ejemploenlace");
+
+        //Cambia hacia donde enlaza
+        enlace.href = "http://darwin.50webs.com";
+    }
+</script>
+<a id="ejemploenlace">Hipervínculo</a>
+<input type="button" onclick="enlazarmipagina()" value="Mi página"/>
+</body>
+</html>

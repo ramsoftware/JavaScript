@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+    <style>
+        div {
+            width: 70px;
+            height: 70px;
+            margin: 20px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+<script>
+    function divclic(caja) {
+        alert("<div> tocado es: " + caja.id);
+    }
+</script>
+<div id="caja1" onclick="divclic(this)"></div>
+<div id="caja2" onclick="divclic(this)"></div>
+<div id="caja3" onclick="divclic(this)"></div>
+<div id="caja4" onclick="divclic(this)"></div>
+</body>
+</html>

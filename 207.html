@@ -1,0 +1,22 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+    <style>
+        div {
+            width: 130px;
+            height: 130px;
+            margin: 20px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+<script>
+    function divmousemueve() {
+        document.bgColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    }
+</script>
+<div id="caja1" onmousemove="divmousemueve()"></div>
+</body>
+</html>
