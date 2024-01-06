@@ -1,0 +1,49 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    /* Crear un tablero de ajedrez de 8*8, poner en una posición al
+       azar el Rey y mostrar su ataque */
+    let tabla = GeneraArregloBidimensional(8, 8, '.');
+    PoneReyAzar(tabla);
+    ImprimeArregloBidimensional(tabla);
+
+    //Pone un Rey al azar y muestra su ataque
+    function PoneReyAzar(arreglo) {
+        let filaAzar = Math.floor(Math.random() * arreglo.length);
+        let coluAzar = Math.floor(Math.random() * arreglo[0].length);
+        if (filaAzar > 0) arreglo[filaAzar - 1][coluAzar] = 'x';
+        if (filaAzar > 0 && coluAzar > 0) arreglo[filaAzar - 1][coluAzar - 1] = 'x';
+        if (coluAzar > 0) arreglo[filaAzar][coluAzar - 1] = 'x';
+        if (coluAzar < arreglo[0].length - 1) arreglo[filaAzar][coluAzar + 1] = 'x';
+        if (filaAzar > 0 && coluAzar < arreglo[0].length - 1) arreglo[filaAzar - 1][coluAzar + 1] = 'x';
+        if (filaAzar < arreglo.length - 1 && coluAzar < arreglo[0].length - 1) arreglo[filaAzar + 1][coluAzar + 1] = 'x';
+        if (filaAzar < arreglo.length - 1) arreglo[filaAzar + 1][coluAzar] = 'x';
+        if (filaAzar < arreglo.length - 1 && coluAzar > 0) arreglo[filaAzar + 1][coluAzar - 1] = 'x';
+        arreglo[filaAzar][coluAzar] = 'R';
+    }
+
+    function GeneraArregloBidimensional(filas, columnas, valor) {
+        let arreglo = [];
+        for (let fila = 0; fila < filas; fila++) {
+            arreglo[fila] = [];
+            for (let columna = 0; columna < columnas; columna++)
+                arreglo[fila][columna] = valor;
+        }
+        return arreglo;
+    }
+
+    function ImprimeArregloBidimensional(arreglo) {
+        for (let fila = 0; fila < arreglo.length; fila++) {
+            document.write("<p style='font-family:courier new;'>");
+            for (let columna = 0; columna < arreglo[fila].length; columna++)
+                document.write(arreglo[fila][columna]);
+            document.write("</p>");
+        }
+    }
+</script>
+</body>
+</html>

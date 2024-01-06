@@ -1,0 +1,37 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Envia una función como parámetro a otra función
+
+    //Se envía una función que retorna el resultado de a - b
+    let prueba = Ejecuta(function (a, b) {
+        return a - b;
+    })
+    document.write(prueba + "<br>");
+
+    //Se envía una función que retorna el resultado de a * b
+    prueba = Ejecuta(function (a, b) {
+        return a * b;
+    })
+    document.write(prueba + "<br>");
+
+    //Se envía una función que retorna el resultado de a / b
+    prueba = Ejecuta(function (a, b) {
+        return a / b;
+    })
+    document.write(prueba + "<br>");
+
+    //Esta función recibe como parámetro: ¡una función!
+    function Ejecuta(unafuncion) {
+        let valorA = 15;
+        let valorB = 10;
+        //Dependiendo de la función recibida como parámetro, ejecuta la acción
+        return unafuncion(valorA, valorB);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    let sudoku = /* El Sudoku como es planteado. Los ceros(0) son las casillas vacías a completar */
+        [[5, 3, 0, 0, 7, 0, 0, 0, 0],
+            [6, 0, 0, 1, 9, 5, 0, 0, 0],
+            [0, 9, 8, 0, 0, 0, 0, 6, 0],
+            [8, 0, 0, 0, 6, 0, 0, 0, 3],
+            [4, 0, 0, 8, 0, 3, 0, 0, 1],
+            [7, 0, 0, 0, 2, 0, 0, 0, 6],
+            [0, 6, 0, 0, 0, 0, 2, 8, 0],
+            [0, 0, 0, 4, 1, 9, 0, 0, 5],
+            [0, 0, 0, 0, 8, 0, 0, 7, 9]
+        ];
+
+    let finalizo = false; /* Mantiene el ciclo hasta que resuelva el Sudoku */
+    let ciclos = 0;   /* Lleva el número de iteraciones */
+
+    let solucion = []; /* Tablero en el que se trabaja */
+    for (let fila = 0; fila < 9; fila++) {
+        solucion[fila] = [];
+        for (let columna = 0; columna < 9; columna++)
+            solucion[fila][columna] = 0;
+    }
+    let DESTRUYE = 700;   /* Cada cuantos ciclos borra números para destrabar */
+
+    /* Ciclo que llenará el sudoku completamente */
+    do {
+        for (let fila = 0; fila < 9; fila++) {    /* Se copia el sudoku sobre el tablero a evaluar */
+            for (let columna = 0; columna < 9; columna++)
+                if (sudoku[fila][columna] !== 0) solucion[fila][columna] = sudoku[fila][columna];
+        }
+
+        let numValido = true;
+        do { /* Busca un número al azar para colocar en alguna celda */
+            let posX = Math.floor(Math.random() * 9);     /* Una posición X de 0 a 8 */
+            let posY = Math.floor(Math.random() * 9);     /* Una posición Y de 0 a 8 */
+            let numero = Math.floor(Math.random() * 9) + 1;     /* Un número al azar de 1 a 9 */
+            numValido = true;     /* Chequea si el número no se repite ni vertical ni horizontalmente */
+            for (let cont = 0; cont < 9; cont++) if (solucion[cont][posY] === numero || solucion[posX][cont] === numero) numValido = false;
+            if (numValido) solucion[posX][posY] = numero; /* Si el número no se repite entonces lo coloca en el tablero */
+        } while (!numValido);
+
+        /* Chequea que NO se viole la regla de que cada uno de los 9 cuadros internos no repita número */
+        for (let cuadroX = 0; cuadroX <= 6; cuadroX += 3)
+            for (let cuadroY = 0; cuadroY <= 6; cuadroY += 3) {
+                let numRepite = 0;
+                for (let valor = 1; valor <= 9; valor++) {
+                    numRepite = 0;
+                    for (let posX = 0; posX < 3; posX++)
+                        for (let posY = 0; posY < 3; posY++) {
+                            if (solucion[cuadroX + posX][cuadroY + posY] === valor) numRepite++;
+                            if (numRepite > 1) break;
+                        }
+
+                    if (numRepite > 1) /* Si detecta repetición, entonces borra todos los números repetidos */
+                        for (let posX = 0; posX < 3; posX++)
+                            for (let posY = 0; posY < 3; posY++)
+                                if (solucion[cuadroX + posX][cuadroY + posY] === valor) solucion[cuadroX + posX][cuadroY + posY] = 0;
+                }
+            }
+
+        finalizo = true; /* Chequea si se completó el sudoku completamente */
+        for (let posX = 0; posX < 9; posX++)
+            for (let posY = 0; posY < 9; posY++)
+                if (solucion[posX][posY] === 0) finalizo = false;
+
+        ciclos++; /* Cada ciertos ciclos para destrabar, borra la tercera parte de lo completado */
+        if (ciclos % DESTRUYE === 0)
+            for (let posX = 0; posX < 9; posX++)
+                for (let posY = 0; posY < 9; posY++)
+                    if (Math.floor(Math.random() * 3) === 0) solucion[posX][posY] = 0;
+    } while (!finalizo);
+
+    document.write("<p style='font-family:courier new;'>");
+    document.write("Ciclos totales: " + ciclos + "</p>");
+    for (let posX = 0; posX < 9; posX++) {
+        document.write("<p style='font-family:courier new;'>");
+        for (let posY = 0; posY < 9; posY++)
+            document.write(solucion[posX][posY] + " ");
+        document.write("</p>");
+    }
+</script>
+</body>
+</html>

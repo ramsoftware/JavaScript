@@ -1,0 +1,84 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    /* Hacer un algoritmo que ponga los 5 barcos
+       al azar en el tablero del juego de batalla naval */
+
+    //Crear el tablero del juego
+    let tableroJuego = inicializaTablero(10, 10);
+
+    //Poner cada barco: arreglo, tipo barco, número de huecos
+    poneBarco(tableroJuego, 'P', 5);
+    poneBarco(tableroJuego, 'G', 4);
+    poneBarco(tableroJuego, 'C', 3);
+    poneBarco(tableroJuego, 'S', 3);
+    poneBarco(tableroJuego, 'D', 2);
+    imprime(tableroJuego);
+
+    //Genera el tablero
+    function inicializaTablero(filas, columnas) {
+        let tablero = [];
+        for (let fila = 0; fila < filas; fila++) {
+            tablero[fila] = [];
+            for (let columna = 0; columna < columnas; columna++)
+                tablero[fila][columna] = '.';
+        }
+        return tablero;
+    }
+
+    function imprime(tablero) { //Imprime el tablero
+        for (let fila = 0; fila < tablero.length; fila++) {
+            document.write("<p style='font-family:courier new;'>");
+            for (let col = 0; col < tablero[0].length; col++)
+                document.write(tablero[fila][col] + " ");
+            document.write("</p>");
+        }
+        document.write("</p>");
+    }
+
+    //Pone el barco en una posición al azar
+    function poneBarco(tablero, simbolo, huecos) {
+        let orienta, fil, col, posValida;
+        do {
+            /* ¿Vertical u horizontal?
+                 0 a 0.4999 es vertical,
+               0.5 a 1 es horizontal */
+            orienta = Math.random();
+
+            fil = Math.floor(Math.random() * tablero.length);
+            col = Math.floor(Math.random() * tablero[0].length);
+            posValida = true; //La posición del barco es válida
+
+            //Chequea si no se sale del tablero
+            if (fil + huecos >= tablero.length && orienta < 0.5)
+                posValida = false; //La posición del barco es inválida
+            else if (col + huecos >= tablero[0].length && orienta >= 0.5)
+                posValida = false; //La posición del barco es inválida
+            else {	//Chequea si ya ha sido ocupada esa parte
+                if (orienta < 0.5)
+                    for (let cont = 0; cont < huecos; cont++) {
+                        if (tablero[fil + cont][col] !== '.')
+                            posValida = false;
+                    }
+                else
+                    for (let cont = 0; cont < huecos; cont++) {
+                        if (tablero[fil][col + cont] !== '.')
+                            posValida = false;
+                    }
+            }
+        } while (posValida === false);
+
+        if (orienta < 0.5)
+            for (let cont = 0; cont < huecos; cont++)
+                tablero[fil + cont][col] = simbolo;
+        else
+            for (let cont = 0; cont < huecos; cont++)
+                tablero[fil][col + cont] = simbolo;
+    }
+</script>
+</body>
+</html>

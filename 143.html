@@ -1,0 +1,44 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    /* Crear un tablero de ajedrez de 8*8, poner en una posición al
+       azar una Torre y mostrar su ataque */
+
+    let tabla = GeneraArregloBidimensional(8, 8, '.');
+    PoneTorreAzar(tabla);
+    ImprimeArregloBidimensional(tabla);
+
+    //Pone una torre al azar y muestra su ataque
+    function PoneTorreAzar(arreglo) {
+        let filaAzar = Math.floor(Math.random() * arreglo.length);
+        let coluAzar = Math.floor(Math.random() * arreglo[0].length);
+        for (let fil = 0; fil < arreglo.length; fil++) arreglo[fil][coluAzar] = 'x';
+        for (let col = 0; col < arreglo[0].length; col++) arreglo[filaAzar][col] = 'x';
+        arreglo[filaAzar][coluAzar] = 'T';
+    }
+
+    function GeneraArregloBidimensional(filas, columnas, valor) {
+        let arreglo = [];
+        for (let fila = 0; fila < filas; fila++) {
+            arreglo[fila] = [];
+            for (let columna = 0; columna < columnas; columna++)
+                arreglo[fila][columna] = valor;
+        }
+        return arreglo;
+    }
+
+    function ImprimeArregloBidimensional(arreglo) {
+        for (let fila = 0; fila < arreglo.length; fila++) {
+            document.write("<p style='font-family:courier new;'>");
+            for (let columna = 0; columna < arreglo[fila].length; columna++)
+                document.write(arreglo[fila][columna]);
+            document.write("</p>");
+        }
+    }
+</script>
+</body>
+</html>

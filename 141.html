@@ -1,0 +1,36 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Llama a función que genera arreglo bidimensional
+    let tabla = GenerarArregloBidimensional(8);
+
+    //Llena el arreglo bidimensional de puntos
+    for (let fila = 0; fila < tabla.length; fila++)
+        for (let columna = 0; columna < 20; columna++)
+            tabla[fila][columna] = '.';
+
+    //Pone una X en una posición al azar
+    let posF = Math.floor(Math.random() * 8);
+    let posC = Math.floor(Math.random() * 20);
+    tabla[posF][posC] = 'X';
+
+    //Imprime la tabla
+    for (let fila = 0; fila < tabla.length; fila++) {
+        document.write("<br>");
+        for (let columna = 0; columna < tabla[fila].length; columna++)
+            document.write(tabla[fila][columna]);
+    }
+
+    //Función genérica para crear arreglo bidimensional
+    function GenerarArregloBidimensional(totalfilas) {
+        let arreglo = [];
+        for (let fila = 0; fila < totalfilas; fila++) arreglo[fila] = [];
+        return arreglo;
+    }
+</script>
+</body>
+</html>

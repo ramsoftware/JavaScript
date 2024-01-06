@@ -1,0 +1,90 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    /* Hay N ciudades a recorrer (0 a N-1). Sólo se puede visitar una ciudad por vez.
+       En la tabla aparece cuanto cuesta ir de una ciudad (origen) a otra ciudad (destino).
+        ¿Qué ruta tomar para visitar todas las ciudades con el mínimo costo? */
+
+    let ciudad = 20; //Número de ciudades
+    let minValor = 15; //Valor mínimo que tendrá ir de una ciudad a otra
+    let maxValor = 85; //Valor máximo que tendrá ir de una ciudad a otra
+
+    let dest1, dest2; //Ciudad origen a Ciudad destino
+
+    //Genera valores de viaje al azar
+    let valorviajes = inicializavalorviajes(ciudad, minValor, maxValor);
+
+    //Imprime los valores
+    imprime(valorviajes);
+
+    //Inicia con una ruta predeterminada 0, 1, 2, 3, .... N ... 0
+    let ruta = iniciaRuta(ciudad);
+
+    //Deduce el costo de esa ruta predeterminada
+    let costo = DeduceCosto(ruta, valorviajes);
+    document.write("<br>" + ruta + "=>" + costo);
+
+    //Usando el método Monte Carlo se buscarán otras rutas con menor costo
+    for (let pruebas = 1; pruebas <= 500000; pruebas++) {
+        dest1 = Math.floor(Math.random() * ruta.length);
+        do {
+            dest2 = Math.floor(Math.random() * ruta.length);
+        } while (dest2 === dest1)
+        ModificaRuta(ruta, dest1, dest2)
+        let costoNuevo = DeduceCosto(ruta, valorviajes);
+        if (costoNuevo < costo) {
+            costo = costoNuevo;
+            document.write("<br>" + ruta + "=>" + costo);
+        } else
+            ModificaRuta(ruta, dest1, dest2); //Dejar la ruta como antes
+    }
+
+    //Modifica la ruta de viaje
+    function ModificaRuta(ruta, dest1, dest2) {
+        let tmp = ruta[dest1];
+        ruta[dest1] = ruta[dest2];
+        ruta[dest2] = tmp;
+    }
+
+    //Inicia el arreglo bidimensional de rutas
+    function iniciaRuta(limite) {
+        const ruta = [];
+        for (let cont = 0; cont < limite; cont++) ruta.push(cont);
+        return ruta;
+    }
+
+    //Deduce el costo de la ruta de viaje
+    function DeduceCosto(ruta, costos) {
+        let acum = 0;
+        for (let cont = 0; cont < ruta.length - 1; cont++)
+            acum += costos[ruta[cont]][ruta[cont + 1]];
+        return acum;
+    }
+
+    //Llena de valores al azar la tabla de costos de viajes de una ciudad a otra
+    function inicializavalorviajes(ciudad, minValor, maxValor) {
+        let tablero = [];
+        for (let fila = 0; fila < ciudad; fila++) {
+            tablero[fila] = [];
+            for (let columna = 0; columna < ciudad; columna++)
+                tablero[fila][columna] = Math.floor(Math.random() * (maxValor - minValor) + minValor);
+        }
+        for (let cont = 0; cont < ciudad; cont++) tablero[cont][cont] = 0;
+        return tablero;
+    }
+
+    //Imprime el tablero
+    function imprime(tablero) {
+        for (let fila = 0; fila < tablero.length; fila++) {
+            for (let col = 0; col < tablero.length; col++)
+                document.write(tablero[fila][col] + " ");
+            document.write("<br>");
+        }
+    }
+</script>
+</body>
+</html>

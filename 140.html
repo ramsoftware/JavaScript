@@ -1,0 +1,33 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Crea el arreglo bidimensional
+    let tabla = new Array(8); //Crea las filas
+
+    //Crea las columnas
+    for (let fila = 0; fila < tabla.length; fila++)
+        tabla[fila] = new Array(20);
+
+    //Llena el arreglo bidimensional de puntos
+    for (let fila = 0; fila < tabla.length; fila++)
+        for (let columna = 0; columna < tabla[fila].length; columna++)
+            tabla[fila][columna] = '.';
+
+    //Pone una X en una posición al azar
+    let posF = Math.floor(Math.random() * 8);
+    let posC = Math.floor(Math.random() * 20);
+    tabla[posF][posC] = 'X';
+
+    //Imprime la tabla
+    for (let fila = 0; fila < tabla.length; fila++) {
+        document.write("<br>");
+        for (let columna = 0; columna < tabla[fila].length; columna++)
+            document.write(tabla[fila][columna]);
+    }
+</script>
+</body>
+</html>
