@@ -1,0 +1,40 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Octavo ejemplo de uso de JSON
+    let Datos =
+        {
+            "cadenaA": "esta es una cadena de ejemplo",
+            "valorA": 17,
+            "valorB": true,
+            "valorC": [29, 31, 43, 47, 51],
+            "otros": {
+                "cadenaB": "Segundo ejemplo",
+                "valores": ["abcdefg", "xyzwqr", "kqxrsft"]
+            }
+        };
+
+    document.write(Datos.cadenaA + "<br>");
+    document.write(Datos.valorA + "<br>");
+    document.write(Datos.valorB + "<br>");
+    document.write(Datos.valorC + "<br>");
+    document.write(Datos.otros.cadenaB + "<br>");
+    document.write(Datos.otros.valores + "<br>");
+    document.write(Datos.otros.valores[1] + "<br>");
+
+    /* Imprime:
+    esta es una cadena de ejemplo
+    17
+    true
+    29,31,43,47,51
+    Segundo ejemplo
+    abcdefg,xyzwqr,kqxrsft
+    xyzwqr
+    */
+</script>
+</body>
+</html>

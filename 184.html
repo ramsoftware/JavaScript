@@ -1,0 +1,22 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    let contador = 1;
+
+    //Cada 500 milisegundos se llamará a la función setInterval
+    let ejecuta = setInterval(Imprime, 500);
+
+    function Imprime() {
+        document.body.innerHTML += ("<br>" + contador);
+        contador++;
+
+        //La función deja de llamarse
+        if (contador === 10) clearInterval(ejecuta);
+    }
+</script>
+</body>
+</html>

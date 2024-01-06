@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    class Nodo {
+        constructor(valorA, valorB) {
+            this.valA = valorA;
+            this.valB = valorB;
+        }
+    }
+
+    const lista = []; //Un arreglo, trabaja como lista de objetos
+    lista.push(new Nodo(17, "a"));
+    lista.push(new Nodo(43, "z"));
+    lista.push(new Nodo(85, "d"));
+
+    lista.shift(); //quita el primer nodo de la lista
+
+    for (let cont = 0; cont < lista.length; cont++)
+        document.write(lista[cont].valA + ", " + lista[cont].valB + "<br>");
+</script>
+</body>
+</html>

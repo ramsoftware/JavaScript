@@ -1,0 +1,30 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Séptimo ejemplo de uso de JSON
+    let clima = [
+        {"temperaturas": [23, 27, 29, 21]},
+        {"temperaturas": [14, 18, 15, 11]},
+        {"temperaturas": [33, 32, 35, 30]}];
+
+    //Va de grupo en grupo de temperaturas
+    for (let cont = 0; cont < clima.length; cont++) {
+
+        //va de ítem en ítem de cada grupo de temperaturas
+        for (let pos = 0; pos < clima[cont].temperaturas.length; pos++)
+            document.write(clima[cont].temperaturas[pos] + ", ");
+        document.write("<br>");
+    }
+
+    /* Imprime:
+    23, 27, 29, 21,
+    14, 18, 15, 11,
+    33, 32, 35, 30,
+    */
+</script>
+</body>
+</html>

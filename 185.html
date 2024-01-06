@@ -1,0 +1,30 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<div id="caja"></div>
+<script>
+    /* Trata de mostrar los primos desde el 10.000 hasta un millón.
+       Eso toma bastante tiempo por lo que la ventana del navegador
+       se congela, no muestra nada y saldrá un aviso de si decide
+       detener el script. Al detener se muestran los números primos
+       que alcanzó a calcular */
+    let numero = 10000;
+    while (numero < 1000000) {
+        if (EsPrimo(numero)) caja.innerHTML = caja.innerHTML + numero + "<br>";
+        numero++;
+    }
+
+    function EsPrimo(num) { //Retorna true si el número enviado por parámetro es primo
+        if (num <= 1) return false;
+        if (num === 2) return true;
+        if (num % 2 === 0) return false;
+        for (let divide = 3; divide <= Math.sqrt(num); divide += 2)
+            if (num % divide === 0) return false;
+        return true;
+    }
+</script>
+</body>
+</html>

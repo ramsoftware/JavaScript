@@ -1,0 +1,30 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Quinto ejemplo de uso de JSON
+    let animal =
+        {
+            "Aves": [
+                {"nombre": "Cuervo", "esperanzavida": 70},
+                {"nombre": "Loro Gris", "esperanzavida": 80},
+                {"nombre": "Zopilote de Turquí", "esperanzavida": 118}],
+
+            "Reptiles": [
+                {"nombre": "Tortuga radiada", "esperanzavida": 100},
+                {"nombre": "Cocodrilo", "esperanzavida": 50},
+                {"nombre": "Dragón de Komodo", "esperanzavida": 30}]
+        };
+    document.write(animal.Aves[0].nombre + "<br>");
+    document.write(animal.Reptiles[1].nombre);
+
+    /* Imprime:
+        Cuervo
+        Cocodrilo
+    */
+</script>
+</body>
+</html>
