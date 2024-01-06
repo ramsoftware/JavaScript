@@ -1,0 +1,37 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Suma dos números enteros positivos almacenados en cadenas
+    let numeroA = "395763487398655335"; //Primer número
+    let numeroB = "888888888888888888"; //Segundo número
+    let resultado = ""; //Guarda el resultado
+    let ultimaPosA = numeroA.length - 1; //Posición del último digito del primer número
+    let ultimaPosB = numeroB.length - 1;
+    let llevar = false; //Se activa si la suma de digitos es 10 o mas
+    while (ultimaPosA >= 0 || ultimaPosB >= 0) { //Suma del digito menos significativo al más significativo
+        let suma = 0; //Suma de digitos
+        if (ultimaPosA >= 0 && ultimaPosB >= 0) //Si ambos digitos existen en esas posiciones
+            suma = parseInt(numeroA[ultimaPosA]) + parseInt(numeroB[ultimaPosB]);
+        else if (ultimaPosA >= 0) //Si sólo existe digito en primer número
+            suma = parseInt(numeroA[ultimaPosA]);
+        else //solo existe digito en segundo numero
+            suma = parseInt(numeroB[ultimaPosB]);
+        if (llevar === true) suma++; //Si llevaba aumenta en 1 la suma
+        llevar = false; //La bandera de llelet se apaga
+        if (suma >= 10) {
+            llevar = true;
+            suma -= 10;
+        } //Si la suma es 10 o más, entonces lleva, le quita 10
+        resultado = suma + resultado; //Agrega al inicio de la cadena
+        ultimaPosA--; //Va hacia la izquierda del primer número
+        ultimaPosB--; //Va hacia la izquierda del segundo número
+    }
+    if (llevar === true) resultado = "1" + resultado; //Si la suma de los primeros digitos es 10 o más
+    document.write(numeroA + " + <br>" + numeroB + "<br>-------------------------<br>" + resultado);
+</script>
+</body>
+</html>

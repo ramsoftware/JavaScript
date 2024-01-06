@@ -1,0 +1,19 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Quita los espacios de una cadena
+    let cadena = "  a b   c   d  e  f  ";
+    let nueva = "";
+    for (let cont = 0; cont < cadena.length; cont++)
+        if (cadena[cont] !== ' ')
+            nueva += cadena[cont];
+
+    document.write("Original: [" + cadena + "]<br>");
+    document.write("Sin espacios : [" + nueva + "]<br>");
+</script>
+</body>
+</html>

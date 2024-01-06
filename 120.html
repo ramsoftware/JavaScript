@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    let datos = [-363, -1793, -2601, -2541, 6376, 6053, 503, 1601, -2994, 648];
+    document.write("Original: " + datos + "<br>");
+    let ordenado = quicksort(datos);
+    document.write("Ordenado: " + ordenado + "<br>");
+
+    function quicksort(arreglo) {
+        if (arreglo.length === 0) return [];
+        let izquierdo = [], derecho = [], pivote = arreglo[0];
+        for (let i = 1; i < arreglo.length; i++)
+            if (arreglo[i] < pivote)
+                izquierdo.push(arreglo[i]);
+            else
+                derecho.push(arreglo[i]);
+
+        return quicksort(izquierdo).concat(pivote, quicksort(derecho));
+    }
+</script>
+</body>
+</html>

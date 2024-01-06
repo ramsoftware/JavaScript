@@ -1,0 +1,30 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Retirar caracteres no permitidos de una cadena
+    let cadena = "Esto es una <b>prueba</b>";
+    let nueva = "";
+    for (let cont = 0; cont < cadena.length; cont++)
+        if (EsPermitido(cadena[cont])) nueva += cadena[cont];
+
+    document.write("Original: " + cadena + "<br>");
+    document.write("Con los caracteres permitidos: " + nueva + "<br>");
+
+    //Retorna true si el caracter está permitido
+    function EsPermitido(caracter) {
+        let permite = "ÁÉÍÓÚáéíóúäëïöü";
+        permite += "abcdefghijklmnñopqrstuvwxyz";
+        permite += "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+        permite += " 1234567890";
+        for (let letra = 0; letra < permite.length; letra++)
+            if (caracter === permite[letra])
+                return true;
+        return false;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Cifrado sencillo con clave de cifrado
+    let cadena = prompt("Escriba texto");
+    let clave = prompt("Clave de cifrado");
+
+    let cifrada = Cifrar(cadena, clave);
+    document.write("Original: " + cadena + "<br>");
+    document.write("Cifrado: " + cifrada + "<br>");
+
+    let descifra = DesCifrar(cifrada, clave);
+    document.write("Descifrado: " + descifra + "<br>");
+
+    function Cifrar(cadena, clave) {
+        let cifrada = "";
+        let clavecont = 0;
+        for (let cont = 0; cont < cadena.length; cont++) {
+            //Cada letra de la clave genera un desplazamiento
+            let desplaza = clave[clavecont++].charCodeAt() % 20;
+            if (clavecont >= clave.length) clavecont = 0; //Si se llega al final de la clave
+            cifrada += String.fromCharCode(cadena[cont].charCodeAt() + desplaza);
+        }
+        return cifrada;
+    }
+
+    function DesCifrar(cadena, clave) {
+        let descifrada = "";
+        let clavecont = 0;
+        for (let cont = 0; cont < cadena.length; cont++) {
+            //Cada letra de la clave genera un desplazamiento
+            let desplaza = clave[clavecont++].charCodeAt() % 20;
+            if (clavecont >= clave.length) clavecont = 0; //Si se llega al final de la clave
+            descifrada += String.fromCharCode(cadena[cont].charCodeAt() - desplaza);
+        }
+        return descifrada;
+    }
+</script>
+</body>
+</html>

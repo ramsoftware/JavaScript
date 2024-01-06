@@ -1,0 +1,20 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    let meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+    let diasemana = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+    let fecha = new Date();
+    let dia = fecha.getDate();
+    let mes = fecha.getMonth();
+    let anyo = fecha.getFullYear();
+    let diadelasemana = fecha.getDay();
+    let mesnombre = meses[mes]; //Convierte el valor numérico en nombre de mes
+    let dianombre = diasemana[diadelasemana]; //Convierte el valor numérico en nombre de día
+    document.write(dianombre + ", " + dia + " de " + mesnombre + " de " + anyo);
+</script>
+</body>
+</html>

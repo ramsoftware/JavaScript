@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Quitar vocales (minúsculas, mayúsculas, tildadas)
+    let cadena = prompt("Escriba un texto");
+    let nueva = "";
+    for (let cont = 0; cont < cadena.length; cont++)
+        if (!EsVocal(cadena[cont])) nueva += cadena[cont];
+    document.write("Original: " + cadena + "<br>");
+    document.write("Sin vocales : " + nueva + "<br>");
+
+    function EsVocal(caracter) { //Retorna true si el caracter es una vocal
+        let vocales = "aeiouAEIOUÁÉÍÓÚáéíóúäëïöü";
+        for (let letra = 0; letra < vocales.length; letra++)
+            if (caracter === vocales[letra])
+                return true;
+
+        return false;
+    }
+</script>
+</body>
+</html>

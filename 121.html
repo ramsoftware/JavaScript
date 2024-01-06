@@ -1,0 +1,32 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    let letras = ['r', 'v', 'e', 'g', 't', 'u', 'd', 'f', 'f', 'y', 'v'];
+    document.write("Original: " + letras + "<br>");
+    let ordenado = mergesort(letras);
+    document.write("Ordenado: " + ordenado + "<br>");
+
+    function mergesort(arreglo) {
+        if (arreglo.length <= 1) return arreglo;
+        let mitad = Math.floor(arreglo.length / 2);
+        let izquierdo = arreglo.slice(0, mitad);
+        let derecho = arreglo.slice(mitad, arreglo.length);
+        return merge(mergesort(izquierdo), mergesort(derecho));
+    }
+
+    function merge(izquierdo, derecho) {
+        let ordenado = [];
+        while (izquierdo && izquierdo.length > 0 && derecho && derecho.length > 0) {
+            let b = izquierdo[0] <= derecho[0];
+            if (b) ordenado.push(izquierdo[0]); else ordenado.push(derecho[0]);
+            if (b) izquierdo.splice(0, 1); else derecho.splice(0, 1);
+        }
+        return ordenado.concat(izquierdo, derecho);
+    }
+</script>
+</body>
+</html>
