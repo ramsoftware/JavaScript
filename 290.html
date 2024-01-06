@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="1200" height="800"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+
+    //Cuadrado 1
+    contexto.beginPath();
+    contexto.rect(10, 10, 200, 200);
+    contexto.fillStyle = 'blue';
+    contexto.fill();
+
+    //Cuadrado 2... semitransparente
+    contexto.globalAlpha = 0.4;
+    contexto.beginPath();
+    contexto.rect(100, 100, 200, 200);
+    contexto.fillStyle = 'gray';
+    contexto.fill();
+</script>
+</body>
+</html>

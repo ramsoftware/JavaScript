@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="1200" height="800"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+
+    //Tipo de letra, tamaño, fuente
+    contexto.font = '50pt Verdana';
+
+    //Ancho de la línea
+    contexto.lineWidth = 1;
+
+    //Color de la línea
+    contexto.strokeStyle = 'orange';
+
+    //Texto a imprimir, posición X, posición Y
+    contexto.strokeText('Esta es una prueba', 10, 100);
+</script>
+</body>
+</html>

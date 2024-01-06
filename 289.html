@@ -1,0 +1,23 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="1200" height="800"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+
+    contexto.rect(50, 50, 200, 200);
+    contexto.fillStyle = 'green';
+
+    contexto.shadowColor = 'blue'; //Color de la sombra
+    contexto.shadowBlur = 50; //Definición de la sombra
+    contexto.shadowOffsetX = 40; //Corrimiento sombra en X
+    contexto.shadowOffsetY = 40; //Corrimiento sombra en Y
+
+    contexto.fill();
+</script>
+</body>
+</html>

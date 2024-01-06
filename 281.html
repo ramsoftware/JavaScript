@@ -1,0 +1,30 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="400" height="400"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+
+    contexto.rect(0, 0, lienzo.width, lienzo.height); //Un rectángulo
+
+    imagen = new Image();
+    imagen.src = 'logo.jpg'; //La imagen está en un archivo .jpg
+
+    //Si la imagen está cargada
+    imagen.onload = function () {
+        contexto.fillStyle = contexto.createPattern(imagen, 'repeat');
+        contexto.fill(); //Rellena
+    }
+
+
+    /* Probemos con esto también:
+       let patron = contexto.createPattern(imagen, 'repeat-x');
+       let patron = contexto.createPattern(imagen, 'repeat-y');
+       let patron = contexto.createPattern(imagen, 'no-repeat'); */
+</script>
+</body>
+</html>

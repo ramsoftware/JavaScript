@@ -1,0 +1,30 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="400" height="400"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+
+    //Hace un rectángulo
+    contexto.rect(0, 0, lienzo.width, lienzo.height);
+
+    /* Crea un gradiente radial que se define como dos círculos imaginarios, el que
+       inicia y el que termina. (posX1, posY1, radio1, posX2, posY2, radio2 */
+    let gradiente = contexto.createRadialGradient(200, 200, 10, 200, 200, 200);
+
+    //Diferentes colores
+    gradiente.addColorStop(0, '#ABCDEF');  //Punto inicial de primer color
+    gradiente.addColorStop(0.2, '#BCD123');
+    gradiente.addColorStop(0.4, '#571ACB');
+    gradiente.addColorStop(0.6, '#C1B2D3');
+    gradiente.addColorStop(0.8, '#F1C5C2');
+    gradiente.addColorStop(1, '#012345');  //Punto final de último color
+    contexto.fillStyle = gradiente;
+    contexto.fill(); //Rellena
+</script>
+</body>
+</html>

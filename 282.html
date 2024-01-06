@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="400" height="400"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+
+    contexto.rect(0, 0, lienzo.width, lienzo.height); //Un rectángulo
+
+    imagen = new Image();
+    imagen.src = 'logo.jpg'; //La imagen está en un archivo .jpg
+
+    //Si la imagen está cargada
+    imagen.onload = function () {
+        //Muestra la imagen, cambiando posición y tamaño de esta
+        //posX, posY, ancho y alto
+        contexto.drawImage(imagen, 50, 50, 300, 30);
+    }
+</script>
+</body>
+</html>

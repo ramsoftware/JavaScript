@@ -1,0 +1,27 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<canvas id="milienzo" width="1200" height="800"></canvas>
+<script>
+    let lienzo = document.getElementById('milienzo');
+    let contexto = lienzo.getContext('2d');
+
+    //Dibuja una línea para hacer referencia
+    contexto.moveTo(350, 0);
+    contexto.lineTo(350, 350);
+    contexto.stroke();
+
+    //Tipo de letra, tamaño, fuente
+    contexto.font = 'bold 45pt Verdana';
+
+    //Alineación del texto: left, center, right, start, end
+    contexto.textAlign = 'end';
+
+    //Texto a imprimir, posición X, posición Y
+    contexto.fillText('Alinear', 350, 100);
+</script>
+</body>
+</html>
