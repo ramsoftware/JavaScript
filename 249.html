@@ -1,0 +1,21 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Describe los objetos de la página
+    function Atributos() {
+        let cajatexto = document.getElementsByTagName("p")[0];
+        alert("Total atributos del texto: " + cajatexto.attributes.length);
+        alert("Nombre atributo 1: " + cajatexto.attributes[0].name);
+        alert("Valor del atributo 1: " + cajatexto.attributes[0].value);
+        alert("Nombre atributo 2: " + cajatexto.attributes[1].name);
+        alert("Valor del atributo 2: " + cajatexto.attributes[1].value);
+    }
+</script>
+<p id="identifica" name="textual">Esto es una prueba</p>
+<input type="button" onclick="Atributos()" value="¿Atributos del texto?">
+</body>
+</html>

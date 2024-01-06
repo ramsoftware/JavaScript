@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Crea etiquetas en tiempo de ejecución
+    function CreaEtiquetas() {
+        let etiqueta = document.createElement("H1");
+        let texto = document.createTextNode("Este es un texto");
+        etiqueta.appendChild(texto);
+        document.body.appendChild(etiqueta);
+    }
+
+    //Cuenta el número de etiquetas qhe hay en el documento
+    function TotalEtiquetas() {
+        let etiquetas = document.getElementsByTagName("H1");
+        alert("Total etiquetas: " + etiquetas.length);
+    }
+</script>
+<input type="button" onclick="CreaEtiquetas()" value="Generar Etiquetas">
+<input type="button" onclick="TotalEtiquetas()" value="Total Etiquetas">
+</body>
+</html>

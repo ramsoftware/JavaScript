@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    /* Valida un correo con una expresión regular */
+    function validacorreo() {
+        let correo = document.getElementById("direccion").value;
+        let exprReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        let resultado = exprReg.test(correo);
+        if (resultado)
+            document.getElementById("mensaje").value = "La dirección de correo electrónico es correcta";
+        else
+            document.getElementById("mensaje").value = "Es errónea la dirección";
+    }
+</script>
+<form id="formulario" onsubmit="validacorreo(); return false;">
+    <p>Ingrese dirección de correo electrónico</p>
+    Correo: <input type="text" id="direccion" size="50"/><br>
+    <input type="submit" id="boton" value="envía"/><br>
+</form>
+Resultado: <input type="text" size="50" id="mensaje"/><br>
+</body>
+</html>

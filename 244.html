@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Crea etiquetas en tiempo de ejecución
+    function CreaEtiquetas() {
+        //Genera una etiqueta
+        let etiqueta = document.createElement("H1");
+
+        //Genera un texto
+        let texto = document.createTextNode("Este es un texto");
+
+        //Agrega el texto a la etiqueta
+        etiqueta.appendChild(texto);
+
+        //Agrega la etiqueta al <body>
+        document.body.appendChild(etiqueta);
+    }
+</script>
+<input type="button" onclick="CreaEtiquetas()" value="Generar Etiquetas">
+</body>
+</html>

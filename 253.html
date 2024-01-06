@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Imprimir una línea
+    document.write("<b>Hola Mundo</b>");
+</script>
+</body>
+</html><!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    /*¿Cuántos números hay entre limitemin y limitemax que las dos últimas cifras son múltiplo de 7?
+      Se muestra un formulario en el que el usuario digita los valores limitemin y limitemax y el
+      programa contesta en el mismo formulario */
+    function calcula() {
+        let cuenta = 0;
+        let cadena = "";
+        let limiteminimo = parseInt(document.getElementById("limitemin").value);
+        let limitemaximo = parseInt(document.getElementById("limitemax").value);
+        for (let numero = limiteminimo; numero <= limitemaximo; numero++)
+            if ((numero % 100) % 7 === 0) {
+                cuenta++;
+                cadena += numero + ", ";
+            }
+        document.getElementById("resultado").value = cuenta;
+        document.getElementById("datos").value = cadena;
+    }
+</script>
+<form id="formulario">
+    <p>¿Cuántos números hay entre "Mínimo" y "Máximo" que las dos últimas cifras son múltiplo de 7?</p>
+    Mínimo: <input type="text" id="limitemin"/><br>
+    Máximo: <input type="text" id="limitemax"/><br>
+    <input type="button" value="Calcular valor" onclick='calcula()'/>
+</form>
+Total: <input type="text" id="resultado"/><br>
+Números: <input type="text" size="200" id="datos"/>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    /* Valida una URL con expresiones regulares */
+    function validaURL() {
+        let url = document.getElementById("direccion").value;
+        let re = /^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)( [a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]*)?$/;
+        let resultado = re.test(url);
+        if (resultado)
+            document.getElementById("mensaje").value = "La URL es correcta";
+        else
+            document.getElementById("mensaje").value = "Es errónea la URL";
+    }
+</script>
+<form id="formulario" onsubmit="validaURL(); return false;">
+    <p>Ingrese una URL</p>
+    URL: <input type="text" size="50" id="direccion"/><br>
+    <input type="submit" id="boton" value="envía"/><br>
+</form>
+Mensaje: <input type="text" size="50" id="mensaje"/><br>
+</body>
+</html>

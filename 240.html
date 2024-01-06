@@ -1,0 +1,19 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Muestra las dimensiones del documento
+    //Nota: Al agregar más líneas con <p> aumenta la altura
+    function Dimensiones() {
+        let altura = document.body.clientHeight;
+        let ancho = document.body.clientWidth;
+        alert("Altura: " + altura + " Ancho: " + ancho);
+    }
+</script>
+<input type="button" onclick="Dimensiones()" value="Tamaños">
+<p>Prueba</p>
+</body>
+</html>

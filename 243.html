@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Crea controles (botones) en tiempo de ejecución
+    function CreaBotones() {
+        //Genera un botón
+        let boton = document.createElement("button");
+
+        //Genera un texto
+        let texto = document.createTextNode("Presionar");
+
+        //Agrega el texto al botón
+        boton.appendChild(texto);
+
+        //Agrega el botón al <body>
+        document.body.appendChild(boton);
+    }
+</script>
+<input type="button" onclick="CreaBotones()" value="Generar Botones">
+</body>
+</html>
