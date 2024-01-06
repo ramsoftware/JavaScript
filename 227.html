@@ -1,0 +1,20 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Obtiene la lista de objetos con <p>, trae el segundo
+    //y muestra el código HTML interno
+    function ChequeaObjetos() {
+        let obtenerobjetos = document.getElementsByTagName("p");
+        alert("Captura objeto <p> : " + obtenerobjetos[1].innerHTML);
+    }
+</script>
+<p>Primer párrafo</p>
+<p><b>Segundo párrafo</b></p>
+<p><b>Tercer párrafo</b></p>
+<input type="button" onclick="ChequeaObjetos()" value="Objetos con <p>">
+</body>
+</html>

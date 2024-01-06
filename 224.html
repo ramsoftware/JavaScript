@@ -1,0 +1,30 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+    <style>
+        input {
+            background-color: lightgreen;
+            border: 1px solid gray;
+        }
+
+        input.enfoco {
+            background-color: lightblue;
+            border: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+<script>
+    function consiguefoco(entrada) {
+        entrada.className = 'enfoco';
+    }
+
+    function fueradelfoco(entrada) {
+        entrada.className = '';
+    }
+</script>
+<input type="text" id="DatoA" onfocus="consiguefoco(this)" onblur="fueradelfoco(this)"/>
+<input type="text" id="DatoB" onfocus="consiguefoco(this)" onblur="fueradelfoco(this)"/>
+</body>
+</html>

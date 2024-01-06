@@ -1,0 +1,19 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Obtiene la lista de objetos tipo entrada, trae el primero
+    //y muestra que valor tiene
+    function ChequeaObjetos() {
+        let obtenerobjetos = document.getElementsByTagName("input");
+        alert("Valor escrito es : " + obtenerobjetos[0].value);
+    }
+</script>
+<input type="text"><br>
+<input type="text"><br>
+<input type="button" onclick="ChequeaObjetos()" value="Leer valor">
+</body>
+</html>

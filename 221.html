@@ -1,0 +1,31 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+    <style>
+        #caja {
+            width: 200px;
+            height: 200px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+<script>
+    //Oculta el <div>
+    function apagar() {
+        let caja = document.getElementById("caja");
+        caja.style.visibility = "hidden";
+    }
+
+    //Muestra el <div>
+    function encender() {
+        let caja = document.getElementById("caja");
+        caja.style.visibility = "visible";
+    }
+</script>
+<div id="caja"></div>
+<input type="button" value="Apagar" onclick="apagar()"/>
+<input type="button" value="Encender" onclick="encender()"/>
+</body>
+</html>

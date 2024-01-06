@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Obtiene la lista de objetos tipo <p>
+    //y cambia la apariencia de cada uno
+    function CambiaObjetos() {
+        let arreglo = document.getElementsByTagName("p");
+        for (let cont = 0; cont < arreglo.length; cont++) { //Cambia la apariencia de cada <p>
+            arreglo[cont].style.color = "red";
+            arreglo[cont].style["font-family"] = "Impact";
+            arreglo[cont].style["font-size"] = "40px";
+        }
+    }
+</script>
+<p>Primer párrafo</p>
+<p>Segundo párrafo</p>
+<p>Tercer párrafo</p>
+<p>Cuarto párrafo</p>
+<input type="button" onclick="CambiaObjetos()" value="Objetos con <p>">
+</body>
+</html>

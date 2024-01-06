@@ -1,0 +1,21 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Cambia el fondo de un <div>
+    function cambiarfondo() {
+        let caja = document.getElementById("cajaejemplo");
+        caja.style.backgroundColor = "green";
+        caja.style.height = "100px";
+        caja.style.width = "50%";
+        caja.style.border = "1px solid black";
+    }
+</script>
+<div id="cajaejemplo">
+    <input type="button" onclick="cambiarfondo()" value="Cambiar fondo"/>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Obtiene la lista de objetos tipo <p>
+    //y muestra el valor que tiene cada uno
+    function ChequeaObjetos() {
+        let arreglo = document.getElementsByTagName("p");
+        for (let cont = 0; cont < arreglo.length; cont++)
+            alert("Contenido : " + arreglo[cont].innerHTML);
+    }
+</script>
+<p>Primer párrafo</p>
+<p><b>Segundo párrafo</b></p>
+<p>Tercer párrafo</p>
+<p>Cuarto párrafo</p>
+<input type="button" onclick="ChequeaObjetos()" value="Objetos con <p>">
+</body>
+</html>

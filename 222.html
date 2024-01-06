@@ -1,0 +1,31 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+    <style>
+        #caja {
+            width: 200px;
+            height: 200px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+<script>
+    //Borra contenido del <div>
+    function borrar() {
+        let caja = document.getElementById("caja");
+        caja.innerHTML = "";
+    }
+
+    //Pone contenido en el <div>
+    function texto() {
+        let caja = document.getElementById("caja");
+        caja.innerHTML = "<b>dentro del DIV</b>";
+    }
+</script>
+<div id="caja">Hola Mundo</div>
+<input type="button" value="Borrar" onclick="borrar()"/>
+<input type="button" value="Mostrar Texto" onclick="texto()"/>
+</body>
+</html>

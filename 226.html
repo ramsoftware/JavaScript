@@ -1,0 +1,19 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Hace un conteo de objetos con la etiqueta <p> en la página
+    function ChequeaObjetos() {
+        let obtenerobjetos = document.getElementsByTagName("p");
+        alert("Total objetos con <p> : " + obtenerobjetos.length);
+    }
+</script>
+<p>Primer párrafo</p>
+<p>Segundo párrafo</p>
+<p>Tercer párrafo</p>
+<input type="button" onclick="ChequeaObjetos()" value="Objetos con <p>">
+</body>
+</html>
