@@ -1,0 +1,27 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Saliendo de ciclos anidados
+    for (let x = 1; x <= 3; x++) {
+        ciclointerno:
+            for (let y = 45; y <= 50; y++) {
+                for (let z = 7; z <= 9; z++) {
+                    document.write(x + ";" + y + ";" + z + "<br>");
+                    if (z === 8) break ciclointerno;
+                }
+            }
+    }
+    /*Resultado:
+    1;45;7
+    1;45;8
+    2;45;7
+    2;45;8
+    3;45;7
+    3;45;8 */
+</script>
+</body>
+</html>

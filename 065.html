@@ -1,0 +1,27 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+    <script src="Libreria.js"></script>
+</head>
+<body>
+<script>
+    let minimo = 1000;
+    let maximo = 9999;
+
+    //Cantidad de números que la suma de las tres últimas cifras es par
+    let cuenta = 0;
+    for (let num = minimo; num <= maximo; num++) {
+        if (EsPar(AntepenultimaCifra(num) + UltimaCifra(num) + PenultimaCifra(num))) {
+            cuenta++;
+        }
+    }
+    Imprime(minimo, maximo, "Cantidad de números que la suma de las tres últimas cifras es par", cuenta);
+
+    //Imprime el resultado en el navegador
+    function Imprime(minimo, maximo, texto, resultado) {
+        document.write("Entre " + minimo + " y " + maximo + ". " + texto + ": " + resultado + "<br>");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Ámbito (scope) de una variable
+    let valor = 17;
+
+    //Imprime 17
+    document.write("<br>Valor antes de la función es: " + valor);
+
+    prueba(); //Llama a la función
+
+    //Imprime 17
+    document.write("<br>Valor después de la función es: " + valor);
+
+    function prueba() {
+        //Imprime 17
+        document.write("<br>Valor dentro de la función es: " + valor);
+    }
+</script>
+</body>
+</html>

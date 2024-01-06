@@ -1,0 +1,31 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+    <script src="Libreria.js"></script>
+</head>
+<body>
+<script>
+    let minimo = 8500;
+    let maximo = 8700;
+
+    //Cantidad de números que al juntar la antepenúltima cifra y la última cifra se obtenga un primo
+    let contar = 0;
+    for (let num = minimo; num <= maximo; num++) {
+        let nuevo = AntepenultimaCifra(num) * 10 + UltimaCifra(num)
+        if (EsPrimo(nuevo)) {
+            document.write(num + ", ");
+            contar++;
+        }
+    }
+    document.write("<br>");
+    Imprime(minimo, maximo, "Cantidad de números que al juntar la antepenúltima cifra y la última cifra se obtenga un primo", contar);
+
+
+    //Imprime el resultado en el navegador
+    function Imprime(minimo, maximo, texto, resultado) {
+        document.write("Entre " + minimo + " y " + maximo + ". " + texto + ": " + resultado + "<br>");
+    }
+</script>
+</body>
+</html>
