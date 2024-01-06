@@ -1,0 +1,19 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    let valA = 64;
+    let valB = 17;
+    document.write("valores: " + valA + " , " + valB + "<br>");
+
+    //Para intercambiar los valores de esas variables se puede hacer uso de operadores de bit (XOR)
+    valA ^= valB;
+    valB ^= valA;
+    valA ^= valB;
+    document.write("valores: " + valA + " , " + valB + "<br>");
+</script>
+</body>
+</html>

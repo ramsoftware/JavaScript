@@ -1,0 +1,33 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Clase Madre
+    class Madre {
+    }
+
+    //Clase Hija (hereda de la madre)
+    class Hija extends Madre {
+    }
+
+    prueba = new Hija();
+
+    document.write("<br><br>prueba es una instancia de Hija: ");
+    document.write(prueba instanceof Hija); //Resultado true
+
+    document.write("<br><br>prueba es una instancia de Madre: ");
+    document.write(prueba instanceof Madre); //Resultado true
+
+    test = new Madre();
+
+    document.write("<br><br>test es una instancia de Hija: ");
+    document.write(test instanceof Hija); //Resultado false
+
+    document.write("<br><br>test es una instancia de Madre: ");
+    document.write(test instanceof Madre); //Resultado true
+</script>
+</body>
+</html>

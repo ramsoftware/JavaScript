@@ -1,0 +1,37 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    let valorA;
+    document.write("<br>1. Tipo de valorA es " + typeof (valorA));
+    valorA = 157;
+    document.write("<br>2. Tipo de valorA es " + typeof (valorA));
+    valorA = "Había una vez...";
+    document.write("<br>3. Tipo de valorA es " + typeof (valorA));
+    valorA = 'K';
+    document.write("<br>4. Tipo de valorA es " + typeof (valorA));
+    valorA = true;
+    document.write("<br>5. Tipo de valorA es " + typeof (valorA));
+    valorA = new Date();
+    document.write("<br>6. Tipo de valorA es " + typeof (valorA));
+    valorA = 5 / 0; //Infinito
+    document.write("<br>7. Tipo de valorA es " + typeof (valorA));
+    valorA = Math.asin(39); //NaN
+    document.write("<br>8. Tipo de valorA es " + typeof (valorA));
+
+    /* Resultado:
+
+    1. Tipo de valorA es undefined
+    2. Tipo de valorA es number
+    3. Tipo de valorA es string
+    4. Tipo de valorA es string
+    5. Tipo de valorA es boolean
+    6. Tipo de valorA es object
+    7. Tipo de valorA es number
+    8. Tipo de valorA es number */
+</script>
+</body>
+</html>

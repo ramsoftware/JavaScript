@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    /* La sobrecarga de métodos NO existe. Este script NO va a funcionar como se espera.
+       Y no va a haber mensaje de error por parte del navegador */
+    class MiClase {
+        MetodoA() {
+            document.write("<br>Llama al método A con cero parámetros");
+        }
+
+        MetodoA(param1, param2) {
+            document.write("<br>Llama al método A con dos parámetros");
+        }
+
+        MetodoA(param1) {
+            document.write("<br>Llama al método A con un parámetro");
+        }
+
+        MetodoA(param1, param2, param3) {
+            document.write("<br>Llama al método A con tres parámetros: " + param1 + ", " + param2 + ", " + param3);
+        }
+    }
+
+    prueba = new MiClase();
+    prueba.MetodoA();
+    prueba.MetodoA(2, 7);
+    prueba.MetodoA(8);
+    prueba.MetodoA(5, 9, 3);
+
+    /* El programa ejecutará así:
+    Llama al método A con tres parámetros: undefined, undefined, undefined
+    Llama al método A con tres parámetros: 2, 7, undefined
+    Llama al método A con tres parámetros: 8, undefined, undefined
+    Llama al método A con tres parámetros: 5, 9, 3 */
+</script>
+</body>
+</html>

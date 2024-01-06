@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Clase abuela
+    class Abuela {
+        constructor() {
+            document.write("<br>Constructor clase abuela");
+        }
+    }
+
+    //Clase Madre
+    class Madre extends Abuela {
+        constructor() {
+            super();
+            document.write("<br>Constructor clase madre");
+        }
+    }
+
+    //Clase Hija (hereda de la madre)
+    class Hija extends Madre {
+        constructor() {
+            super();
+            document.write("<br>Constructor clase hija");
+        }
+    }
+
+    prueba = new Hija();
+    /* Imprime:
+       Constructor clase abuela
+       Constructor clase madre
+       Constructor clase hija
+    */
+</script>
+</body>
+</html>

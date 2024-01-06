@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Definir una clase
+    class Gato {
+        //Constructor de la clase
+        constructor(nombre, sexo, fechanace, raza) {
+            this.nombre = nombre; //define el atributo y le da un valor
+            this.sexo = sexo;
+            this.fechanace = fechanace;
+            this.raza = raza;
+        }
+    }
+
+    //Instanciar un objeto de esa clase
+    let prueba = new Gato("Sally", "F", "10 de junio de 2010", "Criollo");
+
+    document.write(prueba.nombre + " , " + prueba.sexo + " , ");
+    document.write(prueba.fechanace + " , " + prueba.raza);
+</script>
+</body>
+</html>

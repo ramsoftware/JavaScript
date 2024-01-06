@@ -1,0 +1,34 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    class MiClase {
+        #texto; //Declara el atributo privado
+
+        constructor(texto) {
+            this.#texto = texto; //Define el atributo "privado"
+        }
+
+        //Getter
+        get texto() {
+            document.write("Retorna valor <br>");
+            return this.#texto;
+        }
+
+        //Setter
+        set texto(valor) {
+            document.write("Cambia valor <br>");
+            this.#texto = valor;
+        }
+    }
+
+    probar = new MiClase('Grisú y Suini');
+    document.write(probar.texto + "<br>");
+    probar.texto = "Sally";
+    document.write(probar.texto + "<br>");
+</script>
+</body>
+</html>

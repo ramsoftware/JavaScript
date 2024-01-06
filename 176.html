@@ -1,0 +1,37 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Definir una clase
+    class Nodo {
+        //Constructor de la clase
+        constructor(valor, izq, der) {
+            this.valor = valor;
+            this.izquierdo = izq;
+            this.derecho = der;
+        }
+    }
+
+    //Se genera el árbol binario
+    let Nodo1 = new Nodo(1, null, null);
+    let Nodo2 = new Nodo(2, null, null);
+    let Nodo3 = new Nodo(3, null, null);
+    let Nodo4 = new Nodo(4, null, null);
+    let Nodo5 = new Nodo(5, Nodo1, Nodo2);
+    let Nodo6 = new Nodo(6, Nodo3, Nodo4);
+    let Nodo7 = new Nodo(7, Nodo5, Nodo6);
+
+    postorden(Nodo7); //1,2,5,3,4,6,7
+
+    function postorden(nodo) {
+        if (nodo === null) return;
+        postorden(nodo.izquierdo);
+        postorden(nodo.derecho);
+        document.write(" , " + nodo.valor);
+    }
+</script>
+</body>
+</html>

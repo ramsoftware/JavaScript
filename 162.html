@@ -1,0 +1,28 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Definir una clase
+    class Geometria {
+        //Define métodos
+        AreaCuadrado(Lado) {
+            return Lado * Lado;
+        }
+
+        //Define métodos
+        AreaTriangulo(Base, Altura) {
+            return Base * Altura / 2;
+        }
+    }
+
+    //Instanciar un objeto de esa clase
+    let probar = new Geometria();
+
+    document.write("Area del cuadrado es: " + probar.AreaCuadrado(9));
+    document.write("<br>Area del triangulo es: " + probar.AreaTriangulo(3, 4));
+</script>
+</body>
+</html>

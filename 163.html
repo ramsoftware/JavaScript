@@ -1,0 +1,27 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <title>Capacitándose en JavaScript</title>
+</head>
+<body>
+<script>
+    //Definir una clase
+    class Geometria {
+        //Método que define el atributo Lado y le da un valor
+        ValorLado(Lado) {
+            this.Lado = Lado;
+        }
+
+        //Método que retorna el valor del área
+        AreaCuadrado() {
+            return this.Lado * this.Lado;
+        }
+    }
+
+    //Instanciar un objeto de esa clase
+    let probar = new Geometria();
+    probar.ValorLado(11);
+    document.write("Area del Cuadrado es: " + probar.AreaCuadrado());
+</script>
+</body>
+</html>
