@@ -1,0 +1,33 @@
+﻿<!DOCTYPE HTML><html lang="es">
+<head><title>Gráficos</title></head>
+<body>
+<canvas id="milienzo" width="1200" height="800"></canvas>
+<script src="LibreriaGrafica.js"></script>
+<script>
+    //Objeto para hacer los gráficos
+    let Graficos = new Grafica(document.getElementById('milienzo'));
+
+    //Dibuja una elipse
+    let posX = 150, posY = 120;
+    let RadioX = 90, RadioY = 130;
+    let RotaFigura = 220; //En grados
+    let angIni = 120; //En grados
+    let angFin = 210; //En grados
+    let Reloj = true;
+    let GrosorBorde = 8;
+    let ColorBorde = Graficos.ColorAzar();
+    Graficos.Elipse(posX, posY, RadioX, RadioY, RotaFigura, angIni, angFin, Reloj, GrosorBorde, ColorBorde);
+
+    //Dibuja una elipse rellena
+    posX = 350;
+    posY = 200;
+    let ColorRelleno = Graficos.ColorAzar();
+    Graficos.ElipseRellena(posX, posY, RadioX, RadioY, RotaFigura, angIni, angFin, Reloj, ColorRelleno);
+
+    //Dibuja una elipse rellena con borde
+    posX = 550;
+    posY = 400;
+    Graficos.ElipseRellenaBorde(posX, posY, RadioX, RadioY, RotaFigura, angIni, angFin, Reloj, ColorRelleno, GrosorBorde, ColorBorde);
+</script>
+</body>
+</html>

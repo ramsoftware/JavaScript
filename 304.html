@@ -1,0 +1,37 @@
+﻿<!DOCTYPE HTML><html lang="es">
+<head><title>Gráficos</title></head>
+<body>
+<canvas id="milienzo" width="1200" height="800"></canvas>
+<script src="LibreriaGrafica.js"></script>
+<script src="AzarLibreria.js"></script>
+<script>
+    //Objeto para hacer los gráficos
+    let Graficos = new Grafica(document.getElementById('milienzo'));
+
+    //Lista de triángulos
+    let Elipses = [];
+
+    //Genera elipses al azar
+    for (let cont = 1; cont <= 5; cont++){
+        let ColorRelleno = Graficos.ColorAzar(); //Algún color al azar
+        let ColorBorde = Graficos.ColorAzar(); //Algún color al azar
+        let GrosorBorde = Azar.EnteroEntre(3, 10); //Grueso entre 3 y 10
+
+        //Propiedades para cada elipse
+        let posX = Azar.EnteroEntre(100, 400); let posY = Azar.EnteroEntre(100, 400);
+        let RadioX = Azar.EnteroEntre(10, 100); let RadioY = Azar.EnteroEntre(10, 100);
+        let RotaFigura = Azar.EnteroEntre(0, 360);
+        let angIni = Azar.EnteroEntre(10, 180);
+        let angFin = Azar.EnteroEntre(10, 180) + angIni;
+        let Reloj = true;
+
+        //Tipo de triángulo: 1. Solo borde, 2. Sólo relleno, 3. Borde y relleno
+        let Tipo = Azar.EnteroEntre(1, 3);
+
+        Elipses.push(new Elipse(posX, posY, RadioX, RadioY, RotaFigura, angIni, angFin, Reloj, Tipo, GrosorBorde, ColorBorde, ColorRelleno));
+    }
+
+    Graficos.ElipseLista(Elipses);
+</script>
+</body>
+</html>

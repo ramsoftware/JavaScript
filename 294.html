@@ -1,0 +1,27 @@
+﻿<!DOCTYPE HTML><html lang="es">
+<head><title>Gráficos</title></head>
+<body>
+<canvas id="milienzo" width="1200" height="800"></canvas>
+<script src="LibreriaGrafica.js"></script>
+<script src="AzarLibreria.js"></script>
+<script>
+	//Objeto para hacer los gráficos
+	let Graficos = new Grafica(document.getElementById('milienzo'));
+
+	//Lista de líneas
+	let Lineas = [];
+	for (let cont = 1; cont <= 30; cont++){
+		let Color = Graficos.ColorAzar(); //Algún color al azar
+		let Grueso = Azar.EnteroEntre(1, 10); //Grueso entre 1 y 10
+
+		//Trabaja con una lista de líneas
+		let Xini = Azar.EnteroEntre(1, 800); let Yini = Azar.EnteroEntre(1, 800);
+		let Xfin = Azar.EnteroEntre(1, 800); let Yfin = Azar.EnteroEntre(1, 800);
+		Lineas.push(new Linea(Xini, Yini, Xfin, Yfin, Grueso, Color));
+	}
+
+	//Dibuja las líneas: Lista
+	Graficos.LineasListas(Lineas);
+</script>
+</body>
+</html>
