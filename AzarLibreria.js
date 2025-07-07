@@ -1,5 +1,5 @@
 /**
- * Clase con métodos estáticos para manejo de datos aleatorios
+ *  Clase con métodos estáticos para manejo de datos aleatorios
  *  @Author Rafael Alberto Moreno Parra
  *  @Version 1.0 (05 de enero de 2024)
  */
