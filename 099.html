@@ -1,22 +1,25 @@
 ﻿<!DOCTYPE HTML>
 <html lang="es">
 <head>
-    <title>Capacitándose en JavaScript</title>
+	<title>Capacitándose en JavaScript</title>
 </head>
 <body>
 <script>
-    let lenguajes = []; //Vectores o arreglos
-    lenguajes.push("C++");
-    lenguajes.push("C#");
-    lenguajes.push("Visual Basic .Net");
-    lenguajes.push("PHP");
-    lenguajes.push("JavaScript");
-    lenguajes.push("Object Pascal");
-
-    //Recorrer un vector elemento por elemento
-    for (let cont = 0; cont < lenguajes.length; cont++) {
-        document.write("<br>" + lenguajes[cont]);
-    }
+	let Numeros = [];
+	for(let num=1; num<=1000; num++){
+		Numeros.push(Math.floor(Math.random()*1000));
+	}
+	
+	//¿Cuántos números impares hay?
+	let CuentaImpares = 0;
+	for (let cont=0; cont < 30; cont++){
+		document.write(Numeros[cont] + ", ");
+		if (Numeros[cont] % 2 == 1)
+			CuentaImpares++;
+	}
+	document.write("<br>Total de impares: " + CuentaImpares);
+	
+	//¿Cuántos números múltiplos de 7 hay?
 </script>
 </body>
 </html>
