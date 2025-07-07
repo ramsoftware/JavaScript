@@ -1,32 +1,32 @@
 ﻿<!DOCTYPE HTML><html lang="es">
-<head><title>Gráficos</title></head>
+<head><title>...Gráficos...</title></head>
 <body>
 <canvas id="milienzo" width="1200" height="800"></canvas>
 <script src="LibreriaGrafica.js"></script>
 <script>
-    //Objeto para hacer los gráficos
-    let Graficos = new Grafica(document.getElementById('milienzo'));
+	//Objeto para hacer los gráficos
+	let Graficos = new Grafica(document.getElementById('milienzo'));
 
-    //Grosor de las líneas
-    let Grosor = 3;
+	//Grosor de las líneas
+	let Grosor = 3;
 
-    //Trabaja con una lista de líneas
-    let Lineas = [];
+	//Trabaja con una lista de líneas
+	let Lineas = [];
 
-    let limite = 500;
-    let contador = limite;
-    let incremento = 2;
+	let limite = 500;
+	let contador = limite;
+	let incremento = 2;
 
-    do {
-        Lineas.push(new Linea(contador, 10, contador, 200, Grosor, 'blue'));
-        Lineas.push(new Linea(limite - (contador - limite), 10, limite - (contador - limite), 200, Grosor, 'gray'));
-        Lineas.push(new Linea(contador, 200, contador, 380, Grosor, 'red'));
-        Lineas.push(new Linea(limite - (contador - limite), 200, limite - (contador - limite), 380, Grosor, 'green'));
-        incremento++;
-        contador += incremento;
-    }while (contador <= 2 * limite);
+	do {
+		Lineas.push(new Linea(contador, 10, contador, 200, Grosor, 'blue'));
+		Lineas.push(new Linea(limite - (contador - limite), 10, limite - (contador - limite), 200, Grosor, 'gray'));
+		Lineas.push(new Linea(contador, 200, contador, 380, Grosor, 'red'));
+		Lineas.push(new Linea(limite - (contador - limite), 200, limite - (contador - limite), 380, Grosor, 'green'));
+		incremento++;
+		contador += incremento;
+	}while (contador <= 2 * limite);
 
-    Graficos.LineasListas(Lineas);
+	Graficos.LineasListas(Lineas);
 </script>
 </body>
 </html>

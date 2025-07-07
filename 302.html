@@ -1,33 +1,33 @@
 ﻿<!DOCTYPE HTML><html lang="es">
-<head><title>Gráficos</title></head>
+<head><title>...Gráficos...</title></head>
 <body>
 <canvas id="milienzo" width="1200" height="800"></canvas>
 <script src="LibreriaGrafica.js"></script>
 <script>
-    //Objeto para hacer los gráficos
-    let Graficos = new Grafica(document.getElementById('milienzo'));
+	//Objeto para hacer los gráficos
+	let Graficos = new Grafica(document.getElementById('milienzo'));
 
-    //Dibuja la curva Bézier: Xini, Yini, Xcontrol1, Ycontrol1, Xcontrol2, Ycontrol2, Xfinal, Yfinal, Grosor, Color
-    let Xini = 20; let Yini = 20;
-    let Xcontrol1 = 30; let Ycontrol1 = 100;
-    let Xcontrol2 = 200; let Ycontrol2 = 340;
-    let Xfinal = 390; let Yfinal = 60;
-    let Grosor = 5;
-    Graficos.Bezier(Xini, Yini, Xcontrol1, Ycontrol1, Xcontrol2, Ycontrol2, Xfinal, Yfinal, Grosor, 'blue');
+	//Dibuja la curva Bézier: Xini, Yini, Xcontrol1, Ycontrol1, Xcontrol2, Ycontrol2, Xfinal, Yfinal, Grosor, Color
+	let Xini = 20; let Yini = 20;
+	let Xcontrol1 = 30; let Ycontrol1 = 100;
+	let Xcontrol2 = 200; let Ycontrol2 = 340;
+	let Xfinal = 390; let Yfinal = 60;
+	let Grosor = 5;
+	Graficos.Bezier(Xini, Yini, Xcontrol1, Ycontrol1, Xcontrol2, Ycontrol2, Xfinal, Yfinal, Grosor, 'blue');
 
-    //Dibuja curva Cuadrática: Xini, Yini, Xcontrol1, Ycontrol1, Xfinal, Yfinal, Grosor, Color
-    Yini = 300;
-    Ycontrol1 = 200;
-    Yfinal = 300;
-    Graficos.CurvaCuadratica(Xini, Yini, Xcontrol1, Ycontrol1, Xfinal, Yfinal, Grosor, 'red');
+	//Dibuja curva Cuadrática: Xini, Yini, Xcontrol1, Ycontrol1, Xfinal, Yfinal, Grosor, Color
+	Yini = 300;
+	Ycontrol1 = 200;
+	Yfinal = 300;
+	Graficos.CurvaCuadratica(Xini, Yini, Xcontrol1, Ycontrol1, Xfinal, Yfinal, Grosor, 'red');
 
-    //Dibuja un arco: Xcentro, Ycentro, Radio, AnguloInicial en grados, AnguloFinal en grados, Grosor, Color, ContraReloj (true/false)
-    let Xcentro = 150; let Ycentro = 400;
-    let Radio = 100;
-    let AnguloInicial = 0; //En grados
-    let AnguloFinal = 135; //En grados
-    let ContraReloj = true;
-    Graficos.Arco(Xcentro, Ycentro, Radio, AnguloInicial, AnguloFinal, Grosor, 'green', ContraReloj);
+	//Dibuja un arco: Xcentro, Ycentro, Radio, AnguloInicial en grados, AnguloFinal en grados, Grosor, Color, ContraReloj (true/false)
+	let Xcentro = 150; let Ycentro = 400;
+	let Radio = 100;
+	let AnguloInicial = 0; //En grados
+	let AnguloFinal = 135; //En grados
+	let ContraReloj = true;
+	Graficos.Arco(Xcentro, Ycentro, Radio, AnguloInicial, AnguloFinal, Grosor, 'green', ContraReloj);
 </script>
 </body>
 </html>

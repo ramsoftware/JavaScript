@@ -1,29 +1,29 @@
 ﻿<!DOCTYPE HTML><html lang="es">
-<head><title>Gráficos</title></head>
+<head><title>...Gráficos...</title></head>
 <body>
 <canvas id="milienzo" width="1200" height="800"></canvas>
 <script src="LibreriaGrafica.js"></script>
 <script>
-    //Objeto para hacer los gráficos
-    let Graficos = new Grafica(document.getElementById('milienzo'));
+	//Objeto para hacer los gráficos
+	let Graficos = new Grafica(document.getElementById('milienzo'));
 
-    //Dibuja un Poligono de 4 Lados: posX1, posY1, posX2, posY2, posX3, posY3, posX4, posY4, Grosor, Color
-    let ColorBorde = 'blue';
-    let ColorRelleno = 'gray'
-    let posX1 = 110, posY1 = 110;
-    let posX2 = 190, posY2 = 230;
-    let posX3 = 320, posY3 = 130;
-    let posX4 = 220, posY4 = 174;
-    let Grosor = 4;
-    let Tipo = 1;
-    let poligono = new Poligono4Lados(posX1, posY1, posX2, posY2, posX3, posY3, posX4, posY4, Tipo, Grosor, ColorBorde, ColorRelleno);
+	//Dibuja un Poligono de 4 Lados: posX1, posY1, posX2, posY2, posX3, posY3, posX4, posY4, Grosor, Color
+	let ColorBorde = 'blue';
+	let ColorRelleno = 'gray'
+	let posX1 = 110, posY1 = 110;
+	let posX2 = 190, posY2 = 230;
+	let posX3 = 320, posY3 = 130;
+	let posX4 = 220, posY4 = 174;
+	let Grosor = 4;
+	let Tipo = 1;
+	let poligono = new Poligono4Lados(posX1, posY1, posX2, posY2, posX3, posY3, posX4, posY4, Tipo, Grosor, ColorBorde, ColorRelleno);
 
-    //Dibuja el polígono
-    Graficos.Poligono4LadosObj(poligono);
+	//Dibuja el polígono
+	Graficos.Poligono4LadosObj(poligono);
 
-    //Gira el polígono
-    poligono.Girar(90);
-    Graficos.Poligono4LadosObj(poligono);
+	//Gira el polígono
+	poligono.Girar(90);
+	Graficos.Poligono4LadosObj(poligono);
 </script>
 </body>
 </html>

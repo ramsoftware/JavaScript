@@ -1,30 +1,30 @@
 ﻿<!DOCTYPE HTML><html lang="es">
-<head><title>Gráficos</title></head>
+<head><title>...Gráficos...</title></head>
 <body>
 <canvas id="milienzo" width="1200" height="800"></canvas>
 <script src="LibreriaGrafica.js"></script>
 <script>
-    //Objeto para hacer los gráficos
-    let Graficos = new Grafica(document.getElementById('milienzo'));
+	//Objeto para hacer los gráficos
+	let Graficos = new Grafica(document.getElementById('milienzo'));
 
-    //Grosor de las líneas
-    let Grosor = 2;
+	//Grosor de las líneas
+	let Grosor = 2;
 
-    //Trabaja con una lista de líneas
-    let Lineas = [];
-    let variar = 0;
-    let centro = 380;
+	//Trabaja con una lista de líneas
+	let Lineas = [];
+	let variar = 0;
+	let centro = 380;
 
-    for (let cont = 1; cont <= 30; cont += 1) {
-        Lineas.push(new Linea(centro - variar, centro - variar, centro - variar + variar * 2, centro - variar, Grosor, Graficos.ColorAzar()));
-        Lineas.push(new Linea(centro - variar, centro - variar, centro - variar, centro - variar + variar * 2, Grosor, Graficos.ColorAzar()));
-        Lineas.push(new Linea(centro - variar + variar * 2, centro - variar, centro - variar + variar * 2, centro - variar + variar * 2, Grosor, Graficos.ColorAzar()));
-        Lineas.push(new Linea(centro - variar, centro - variar + variar * 2, centro - variar + variar * 2, centro - variar + variar * 2, Grosor, Graficos.ColorAzar()));
-        variar = variar + 10;
-    }
+	for (let cont = 1; cont <= 30; cont += 1) {
+		Lineas.push(new Linea(centro - variar, centro - variar, centro - variar + variar * 2, centro - variar, Grosor, Graficos.ColorAzar()));
+		Lineas.push(new Linea(centro - variar, centro - variar, centro - variar, centro - variar + variar * 2, Grosor, Graficos.ColorAzar()));
+		Lineas.push(new Linea(centro - variar + variar * 2, centro - variar, centro - variar + variar * 2, centro - variar + variar * 2, Grosor, Graficos.ColorAzar()));
+		Lineas.push(new Linea(centro - variar, centro - variar + variar * 2, centro - variar + variar * 2, centro - variar + variar * 2, Grosor, Graficos.ColorAzar()));
+		variar = variar + 10;
+	}
 
-    //Dibuja las líneas: Lista
-    Graficos.LineasListas(Lineas);
+	//Dibuja las líneas: Lista
+	Graficos.LineasListas(Lineas);
 </script>
 </body>
 </html>
