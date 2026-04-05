@@ -1,0 +1,15 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Primer ejemplo de uso de JSON
+let dato = {"id": 13, "nombre": "Rafael Alberto Moreno", "tiposangre": "O+", "altura": 1.80}
+document.getElementById("salida").innerHTML = dato.nombre + "<br>" + dato.tiposangre + "<br>" + dato.id + "<br>";
+document.getElementById("salida").innerHTML += dato.altura + "<br>";
+
+/* Imprime
+Rafael Alberto Moreno
+O+
+13
+1.8
+*/
+</script></body></html>

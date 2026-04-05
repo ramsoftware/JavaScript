@@ -1,0 +1,32 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Octavo ejemplo de uso de JSON
+let Datos =
+	{
+		"cadenaA": "esta es una cadena de ejemplo",
+		"valorA": 17,
+		"valorB": true,
+		"valorC": [29, 31, 43, 47, 51],
+		"otros": {
+			"cadenaB": "Segundo ejemplo",
+			"valores": ["abcdefg", "xyzwqr", "kqxrsft"]
+		}
+	};
+
+document.getElementById("salida").innerHTML = Datos.cadenaA + "<br>" + Datos.valorA + "<br>";
+document.getElementById("salida").innerHTML += Datos.valorB + "<br>" + Datos.valorC + "<br>";
+document.getElementById("salida").innerHTML += Datos.otros.cadenaB + "<br>";
+document.getElementById("salida").innerHTML += Datos.otros.valores + "<br>";
+document.getElementById("salida").innerHTML += Datos.otros.valores[1] + "<br>";
+
+/* Imprime:
+esta es una cadena de ejemplo
+17
+true
+29,31,43,47,51
+Segundo ejemplo
+abcdefg,xyzwqr,kqxrsft
+xyzwqr
+*/
+</script></body></html>
