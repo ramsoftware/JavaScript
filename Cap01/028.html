@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+
+  <script>
+    // Captura el error
+    let expresion = prompt("Escriba expresión algebraica");
+
+    try {
+      let valor = eval(expresion);
+      document.getElementById("salida").innerHTML = "Valor calculado es: " + valor;
+    } catch (errordetectado) {
+      document.getElementById("salida").innerHTML = "Mensaje de error: " + errordetectado.message;
+    }
+  </script>
+</body></html>

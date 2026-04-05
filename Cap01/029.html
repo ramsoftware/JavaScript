@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+  <script>
+    let valorA;
+
+    let salida = "";
+    salida += "<br>1. Tipo de valorA es " + typeof (valorA);
+
+    valorA = 157;
+    salida += "<br>2. Tipo de valorA es " + typeof (valorA);
+
+    valorA = "Había una vez...";
+    salida += "<br>3. Tipo de valorA es " + typeof (valorA);
+
+    valorA = 'K';
+    salida += "<br>4. Tipo de valorA es " + typeof (valorA);
+
+    valorA = true;
+    salida += "<br>5. Tipo de valorA es " + typeof (valorA);
+
+    valorA = new Date();
+    salida += "<br>6. Tipo de valorA es " + typeof (valorA);
+
+    valorA = 5 / 0; // Infinito
+    salida += "<br>7. Tipo de valorA es " + typeof (valorA);
+
+    valorA = Math.asin(39); // NaN
+    salida += "<br>8. Tipo de valorA es " + typeof (valorA);
+
+    document.getElementById("salida").innerHTML = salida;
+  </script>
+</body></html>

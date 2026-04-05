@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+
+  <script>
+    // Librería matemática.
+    let salida = "Raíz cúbica: " + Math.cbrt(1331);
+    salida += "<br>Techo: " + Math.ceil(4.01);
+    salida += "<br>Exponencial: " + Math.exp(1);           // e elevado a N
+    salida += "<br>Piso: " + Math.floor(4.99);
+    salida += "<br>Log: " + Math.log(2);                   // Logaritmo natural
+    salida += "<br>Mayor: " + Math.max(5, 9, 7, 3);        // Máximo valor
+    salida += "<br>Menor: " + Math.min(5, 9, 7, 3);        // Mínimo valor
+    salida += "<br>Potencia: " + Math.pow(2, 5);           // base, potencia
+    salida += "<br>Aleatorio: " + Math.random();           // Aleatorio entre 0 y 1
+    salida += "<br>Redondeo: " + Math.round(3.7);
+    salida += "<br>Redondeo: " + Math.round(3.3);
+    salida += "<br>Redondeo: " + Math.round(3.5);
+    salida += "<br>Raíz cuadrada: " + Math.sqrt(144);
+    salida += "<br>Truncar: " + Math.trunc(8.923);         // Trunca al entero
+
+    document.getElementById("salida").innerHTML = salida;
+  </script>
+</body></html>

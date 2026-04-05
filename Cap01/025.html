@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+
+  <script>
+    // Uso de isNaN
+    let salida = "";
+
+    salida += isNaN(891) + "<br>";            // false
+    salida += isNaN(-7.19) + "<br>";          // false
+    salida += isNaN(79 + 21) + "<br>";        // false
+    salida += isNaN(0) + "<br>";              // false
+    salida += isNaN('888') + "<br>";          // false
+    salida += isNaN('Probar') + "<br>";       // true
+    salida += isNaN('2019/01/13') + "<br>";   // true
+    salida += isNaN('') + "<br>";             // false
+    salida += isNaN(true) + "<br>";           // false
+    salida += isNaN(undefined) + "<br>";      // true
+    salida += isNaN('NaN') + "<br>";          // true
+    salida += isNaN(NaN) + "<br>";            // true
+    salida += isNaN(0 / 0) + "<br>";          // true
+
+    document.getElementById("salida").innerHTML = salida;
+  </script>
+</body></html>

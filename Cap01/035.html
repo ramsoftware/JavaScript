@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+  <script>
+    // Operaciones de bit
+    let valA = 64;
+
+    let salida = "";
+    salida += valA + " en binario es: " + valA.toString(2) + "<br>";
+
+    let valB = valA >> 1; // Divide entre 2
+    salida += valB + " en binario es: " + valB.toString(2) + "<br>";
+
+    let valC = valA >> 2; // Divide entre 4
+    salida += valC + " en binario es: " + valC.toString(2) + "<br>";
+
+    let valD = valA >> 3; // Divide entre 8
+    salida += valD + " en binario es: " + valD.toString(2) + "<br>";
+
+    document.getElementById("salida").innerHTML = salida;
+  </script>
+</body></html>

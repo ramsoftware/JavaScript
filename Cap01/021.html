@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+
+  <script>
+    // Cálculo del área de un triángulo según sus lados (Fórmula de Herón)
+    let ladoA = parseFloat(prompt("Longitud Lado A"));
+    let ladoB = parseFloat(prompt("Longitud Lado B"));
+    let ladoC = parseFloat(prompt("Longitud Lado C"));
+
+    let s = (ladoA + ladoB + ladoC) / 2; // semiperímetro
+    let area = Math.sqrt(s * (s - ladoA) * (s - ladoB) * (s - ladoC));
+
+    document.getElementById("salida").innerHTML = "Área es: " + area;
+  </script>
+</body></html>

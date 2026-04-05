@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html><html lang="es">
+<body>
+  <p id="salida"></p>
+
+  <script>
+    // Verificar si un número es legal o no
+    let dividendo = parseInt(prompt("Digite dividendo"));
+    let divisor   = parseInt(prompt("Digite divisor"));
+
+    let resultado = dividendo / divisor;
+
+    // Verifica si el resultado es un número finito (no Infinity, -Infinity o NaN)
+    if (isFinite(resultado)) {
+      document.getElementById("salida").innerHTML = "Valor correcto: " + resultado;
+    } else {
+      document.getElementById("salida").innerHTML = "Número no legal: " + resultado;
+    }
+  </script>
+</body></html>

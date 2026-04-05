@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+
+  <script>
+    // Librería matemática.
+    let angGrados = 35;
+    let salida = "Grados: " + angGrados;
+
+    let angRadian = angGrados * Math.PI / 180;
+    salida += "<br>Radianes: " + angRadian;
+
+    let seno = Math.sin(angRadian);      // Seno
+    salida += "<br>Seno: " + seno;
+
+    let coseno = Math.cos(angRadian);    // Coseno
+    salida += "<br>Coseno: " + coseno;
+
+    let tangente = Math.tan(angRadian);  // Tangente
+    salida += "<br>Tangente: " + tangente;
+
+    let arcoseno = Math.asin(seno);      // Arcoseno
+    salida += "<br>Arcoseno: " + arcoseno;
+
+    let arcocoseno = Math.acos(coseno);  // Arcocoseno
+    salida += "<br>Arcocoseno: " + arcocoseno;
+
+    let arcotangente = Math.atan(tangente); // Arcotangente
+    salida += "<br>Arcotangente: " + arcotangente;
+
+    document.getElementById("salida").innerHTML = salida;
+  </script>
+</body></html>

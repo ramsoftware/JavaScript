@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+
+  <script>
+    // Asignación
+    let valA = 8;
+    let valB = valA * 2;
+
+    // Mostrar resultados de forma moderna y sencilla
+    document.getElementById("salida").innerHTML =
+      valA + " y " + valB + "<br>";
+
+    valA += 10; // Sumar 10
+    valB -= 5;  // Restar 5
+    document.getElementById("salida").innerHTML +=
+      valA + " y " + valB + "<br>";
+
+    valA *= 3; // Multiplicar por 3
+    valB /= 2; // Dividir entre 2
+    document.getElementById("salida").innerHTML +=
+      valA + " y " + valB + "<br>";
+  </script>
+</body></html>

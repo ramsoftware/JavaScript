@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+
+  <script>
+    // Chequea si el usuario digitó un número correctamente
+    let numero = parseInt(prompt("Digite número"));
+
+    if (isNaN(numero)) {
+      document.getElementById("salida").innerHTML = "No escribió un número";
+    } else {
+      document.getElementById("salida").innerHTML = "Número escrito es: " + numero;
+    }
+  </script>
+</body></html>

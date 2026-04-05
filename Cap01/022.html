@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+
+  <script>
+    // Área y perímetro del círculo
+    let radio = parseFloat(prompt("Radio"));
+    let area = Math.PI * radio * radio;
+    let perimetro = Math.PI * radio * 2;
+
+    document.getElementById("salida").innerHTML =
+      "Área es: " + area + "<br>" +
+      "Perímetro es: " + perimetro;
+  </script>
+</body></html>

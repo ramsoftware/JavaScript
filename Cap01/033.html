@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+  <script>
+    // Operaciones de bit
+    let valA = 25;
+    let valB = 20;
+
+    let salida = "";
+    salida += valA + " en binario es: " + valA.toString(2) + "<br>";
+    salida += valB + " en binario es: " + valB.toString(2) + "<br>";
+
+    let valC = valA ^ valB; // Operación XOR
+    salida += valC + " en binario es: " + valC.toString(2) + "<br>";
+
+    document.getElementById("salida").innerHTML = salida;
+  </script>
+</body></html>

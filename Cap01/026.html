@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+
+  <script>
+    // Chequea si existe el NaN (Not a Number)
+    let numero = parseFloat(prompt("Digite número"));
+    let valor = Math.asin(numero);
+
+    if (isNaN(valor)) {
+      document.getElementById("salida").innerHTML = "Valor erróneo para arcoseno";
+    } else {
+      document.getElementById("salida").innerHTML = "Arcoseno es: " + valor;
+    }
+  </script>
+</body></html>
