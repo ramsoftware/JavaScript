@@ -1,0 +1,11 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Invierte la cadena
+let cadena = "Rafael Alberto Moreno Parra";
+let nueva = "";
+for (let cont = 0; cont < cadena.length; cont++) nueva = cadena[cont] + nueva;
+
+document.getElementById("salida").innerHTML = "Original: " + cadena + "<br>";
+document.getElementById("salida").innerHTML += "Invierte: " + nueva + "<br>";
+</script></body></html>

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Cifrado sencillo
+let cadena = prompt("Escriba un texto");
+let cifrada = Cifrar(cadena);
+document.getElementById("salida").innerHTML = "Original: " + cadena + "<br>";
+document.getElementById("salida").innerHTML += "Cifrado: " + cifrada + "<br>";
+
+let descifra = DesCifrar(cifrada);
+document.getElementById("salida").innerHTML += "Descifrado: " + descifra + "<br>";
+
+//Cifra la cadena moviendo un caracter hacia adelante
+function Cifrar(cadena) {
+	let cifrada = "";
+	for (let cont = 0; cont < cadena.length; cont++) {
+		let num = cadena[cont].charCodeAt(); //Trae el valor ASCII de la letra
+		num++; //Incrementa en uno ese valor
+		cifrada += String.fromCharCode(num); //Convierte el valor a su respectivo caracter
+	}
+	return cifrada;
+}
+
+//DesCifra la cadena cifrada moviendo un caracter hacia atrás
+function DesCifrar(cadena) {
+	let descifrada = "";
+	for (let cont = 0; cont < cadena.length; cont++) {
+		let num = cadena[cont].charCodeAt(); //Trae el valor ASCII de la letra
+		num--; //Incrementa en uno ese valor
+		descifrada += String.fromCharCode(num); //Convierte el valor a su respectivo caracter
+	}
+	return descifrada;
+}
+</script></body></html>
