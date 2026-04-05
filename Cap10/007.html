@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML><html lang="es"><head><meta charset="UTF-8">
+<style>
+    div {
+        width: 230px;
+        height: 230px;
+        margin: 20px;
+        background-color: lightgreen;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div id="caja1"></div>
+
+<script>
+    function divDobleClic() {
+        alert("Diste doble clic");
+    }
+
+    // Asignar evento
+    document.getElementById("caja1").addEventListener("dblclick", divDobleClic);
+</script>
+
+</body></html>

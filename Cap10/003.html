@@ -1,0 +1,12 @@
+﻿<!DOCTYPE html><html lang="es"><head></head><body>
+  <a href="#" id="enlace">De clic aquí</a>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const enlace = document.getElementById("enlace");
+      enlace.addEventListener("click", (event) => {
+        event.preventDefault(); // evita que el enlace recargue la página
+        alert("Hola mundo");
+      });
+    });
+  </script>
+</body></html>

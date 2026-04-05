@@ -1,0 +1,29 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<form id="formulario" method="post">
+    <input type="text" id="texto">
+    <input type="submit" id="boton" value="envía">
+</form>
+
+<script>
+    function formularioEnvia(e) {
+        e.preventDefault();
+        alert("envío");
+    }
+
+    function presionaTecla(event) {
+        alert(event.keyCode);
+    }
+
+    document.getElementById("formulario").addEventListener("submit", formularioEnvia);
+
+    document.getElementById("texto").addEventListener("keyup", presionaTecla);
+</script>
+
+</body>
+</html>

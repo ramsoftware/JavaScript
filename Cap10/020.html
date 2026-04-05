@@ -1,0 +1,35 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<form id="formulario" method="post">
+    <input type="text" id="texto">
+    <input type="submit" id="boton" value="envía">
+</form>
+
+<script>
+    function formularioEnvia(e) {
+        e.preventDefault();
+        alert("activo envío");
+    }
+
+    function abajo() {
+        alert("abajo");
+    }
+
+    function presiona() {
+        alert("presiona");
+    }
+
+    document.getElementById("formulario").addEventListener("submit", formularioEnvia);
+
+    const cajaTexto = document.getElementById("texto");
+    cajaTexto.addEventListener("keydown", abajo);
+    cajaTexto.addEventListener("keypress", presiona);
+</script>
+
+</body>
+</html>

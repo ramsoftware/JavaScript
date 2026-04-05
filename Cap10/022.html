@@ -1,0 +1,29 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<form id="formulario" method="post">
+    <p><input type="text" id="texto"></p>
+    <p><input type="text" id="otro"></p>
+    <p><input type="submit" id="boton" value="envía"></p>
+</form>
+
+<script>
+    function formularioEnvia(e) {
+        e.preventDefault();
+        alert("activo envío");
+    }
+
+    function cambiaTexto() {
+        alert("Ha cambiado el texto");
+    }
+
+    document.getElementById("formulario").addEventListener("submit", formularioEnvia);
+    document.getElementById("texto").addEventListener("change", cambiaTexto);
+</script>
+
+</body>
+</html>

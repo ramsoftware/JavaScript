@@ -1,0 +1,30 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<form id="formulario" method="post">
+  <input type="text" id="texto"/><br>
+  <input type="text" id="otro"/><br>
+  <input type="submit" id="boton" value="envía"/>
+</form>
+
+<script>
+  function formularioEnvia(e) {
+    e.preventDefault(); // Evita navegación para que se vea el alert
+    alert("activo envío");
+  }
+
+  function entraFocoTexto() {
+    alert("está en la caja de texto");
+    document.getElementById("otro").focus();
+  }
+
+  document.getElementById("formulario").addEventListener("submit", formularioEnvia);
+  document.getElementById("texto").addEventListener("focus", entraFocoTexto);
+</script>
+
+</body>
+</html>

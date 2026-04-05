@@ -1,0 +1,23 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<a id="enlace" href="http://darwin.50webs.com">Enlace</a>
+
+<script>
+    function navegar() {
+        return confirm("¿Irá a esa página?");
+    }
+
+    document.getElementById("enlace").addEventListener("click", function (event) {
+        if (!navegar()) {
+            event.preventDefault(); // Cancela la navegación si el usuario dice NO
+        }
+    });
+</script>
+
+</body>
+</html>

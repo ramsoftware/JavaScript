@@ -1,0 +1,29 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<form id="formulario" method="post">
+    <input type="text" id="texto">
+    <input type="text" id="segundotexto">
+    <input type="submit" id="boton" value="envía">
+</form>
+
+<script>
+    function formularioEnvia(e) {
+        e.preventDefault();
+        alert("activo envío");
+    }
+
+    function saleFocoTexto() {
+        alert("salió de la caja de texto");
+    }
+
+    document.getElementById("formulario").addEventListener("submit", formularioEnvia);
+    document.getElementById("texto").addEventListener("blur", saleFocoTexto);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+    div {
+        width: 230px;
+        height: 230px;
+        margin: 20px;
+        background-color: lightgreen;
+    }
+</style>
+</head>
+<body>
+
+<div id="caja1"></div>
+
+<script>
+    function divMouseSuelta() {
+        alert("Soltó tecla del ratón");
+    }
+
+    document.getElementById("caja1").addEventListener("mouseup", divMouseSuelta);
+</script>
+
+</body>
+</html>

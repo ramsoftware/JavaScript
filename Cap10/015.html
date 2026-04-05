@@ -1,0 +1,23 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<form id="formulario" method="post">
+  <input type="submit" id="boton" value="envía"/>
+</form>
+
+<script>
+  function formularioEnvia(e) {
+    // Evita recargar o navegar, manteniendo visible el alert
+    e.preventDefault();
+    alert("activo envío");
+  }
+
+  document.getElementById("formulario").addEventListener("submit", formularioEnvia);
+</script>
+
+</body>
+</html>

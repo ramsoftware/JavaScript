@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .caja {
+      width: 230px;
+      height: 230px;
+      margin: 20px;
+      background-color: lightgreen;
+      display: inline-block;
+    }
+  </style>
+  <script>
+    function clicCaja() {
+      alert("Dio clic dentro de un <div>");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const cajas = document.querySelectorAll(".caja");
+      cajas.forEach(caja => {
+        caja.addEventListener("click", clicCaja);
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="caja1" class="caja"></div>
+  <div id="caja2" class="caja"></div>
+  <div id="caja3" class="caja"></div>
+  <div id="caja4" class="caja"></div>
+</body>
+</html>

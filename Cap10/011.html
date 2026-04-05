@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+    div {
+        width: 230px;
+        height: 230px;
+        margin: 20px;
+        background-color: lightgreen;
+    }
+</style>
+</head>
+<body>
+
+<div id="caja1"></div>
+
+<script>
+    function divMousePresiona() {
+        alert("clic de ratón");
+    }
+
+    document.getElementById("caja1").addEventListener("mousedown", divMousePresiona);
+</script>
+
+</body>
+</html>
