@@ -1,0 +1,27 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Clase Madre
+class Madre {
+}
+
+//Clase Hija (hereda de la madre)
+class Hija extends Madre {
+}
+
+prueba = new Hija();
+
+document.getElementById("salida").innerHTML = "<br><br>prueba es una instancia de Hija: ";
+document.getElementById("salida").innerHTML += prueba instanceof Hija; //Resultado true
+
+document.getElementById("salida").innerHTML += "<br><br>prueba es una instancia de Madre: ";
+document.getElementById("salida").innerHTML += prueba instanceof Madre; //Resultado true
+
+test = new Madre();
+
+document.getElementById("salida").innerHTML += "<br><br>test es una instancia de Hija: ";
+document.getElementById("salida").innerHTML += test instanceof Hija; //Resultado false
+
+document.getElementById("salida").innerHTML += "<br><br>test es una instancia de Madre: ";
+document.getElementById("salida").innerHTML += test instanceof Madre; //Resultado true
+</script></body></html>

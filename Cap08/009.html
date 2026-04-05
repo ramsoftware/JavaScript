@@ -1,0 +1,33 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Clase abuela
+class Abuela {
+	constructor() {
+		document.getElementById("salida").innerHTML += "<br>Constructor clase abuela";
+	}
+}
+
+//Clase Madre
+class Madre extends Abuela {
+	constructor() {
+		super();
+		document.getElementById("salida").innerHTML += "<br>Constructor clase madre";
+	}
+}
+
+//Clase Hija (hereda de la madre)
+class Hija extends Madre {
+	constructor() {
+		super();
+		document.getElementById("salida").innerHTML += "<br>Constructor clase hija";
+	}
+}
+
+prueba = new Hija();
+/* Imprime:
+   Constructor clase abuela
+   Constructor clase madre
+   Constructor clase hija
+*/
+</script></body></html>

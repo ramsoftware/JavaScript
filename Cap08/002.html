@@ -1,0 +1,22 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Definir una clase
+class Geometria {
+	//Define métodos
+	AreaCuadrado(Lado) {
+		return Lado * Lado;
+	}
+
+	//Define métodos
+	AreaTriangulo(Base, Altura) {
+		return Base * Altura / 2;
+	}
+}
+
+//Instanciar un objeto de esa clase
+let probar = new Geometria();
+
+document.getElementById("salida").innerHTML = "Area del cuadrado es: " + probar.AreaCuadrado(9);
+document.getElementById("salida").innerHTML += "<br>Area del triangulo es: " + probar.AreaTriangulo(3, 4);
+</script></body></html>

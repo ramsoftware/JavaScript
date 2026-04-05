@@ -1,0 +1,22 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Definir una clase
+class UnaClase {
+	//La convención es poner un # al principio
+	//del nombre del método para indicar que es
+	//un método privado
+	#UnMetodo() {
+		document.getElementById("salida").innerHTML += "Método privado<br>";
+	}
+
+	#OtroMetodo() {
+		document.getElementById("salida").innerHTML += "Otro método privado<br>";
+	}
+}
+
+//Instanciar un objeto de esa clase
+let probar = new UnaClase();
+probar.#UnMetodo();
+probar.#OtroMetodo();
+</script></body></html>
