@@ -1,0 +1,40 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  input.error {
+    border: 1px solid red;
+    background-color: yellow;
+  }
+</style>
+</head>
+<body>
+
+<label>Valor:
+  <input type="text" id="Numero">
+</label>
+<label> Dato:
+  <input type="text" id="Dato">
+</label>
+
+<script>
+  function validaNumero(e) {
+    const entrada = e.target;
+    if (entrada.value !== "") {
+      if (isNaN(entrada.value)) {
+        entrada.classList.add('error');
+      } else {
+        entrada.classList.remove('error');
+      }
+    } else {
+      // Si está vacío, quitamos el posible estado de error
+      entrada.classList.remove('error');
+    }
+  }
+
+  document.getElementById('Numero').addEventListener('blur', validaNumero);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+    #caja {
+        width: 200px;
+        height: 200px;
+        background-color: lightgreen;
+    }
+</style>
+</head>
+<body>
+
+<div id="caja">Hola Mundo</div>
+
+<input type="button" id="btnBorrar" value="Borrar">
+<input type="button" id="btnTexto" value="Mostrar Texto">
+
+<script>
+    function borrar() {
+        document.getElementById("caja").innerHTML = "";
+    }
+
+    function texto() {
+        document.getElementById("caja").innerHTML = "<b>dentro del DIV</b>";
+    }
+
+    document.getElementById("btnBorrar").addEventListener("click", borrar);
+    document.getElementById("btnTexto").addEventListener("click", texto);
+</script>
+
+</body>
+</html>

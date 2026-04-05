@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  input {
+    background-color: lightgreen;
+    border: 1px solid gray;
+  }
+  input.enfoco {
+    background-color: lightblue;
+    border: 3px solid green;
+  }
+</style>
+</head>
+<body>
+
+<input type="text" id="DatoA">
+<input type="text" id="DatoB">
+
+<script>
+  function consigueFoco(e) {
+    e.target.classList.add('enfoco');
+  }
+  function fueraDelFoco(e) {
+    e.target.classList.remove('enfoco');
+  }
+
+  const a = document.getElementById('DatoA');
+  const b = document.getElementById('DatoB');
+
+  a.addEventListener('focus', consigueFoco);
+  a.addEventListener('blur', fueraDelFoco);
+
+  b.addEventListener('focus', consigueFoco);
+  b.addEventListener('blur', fueraDelFoco);
+</script>
+
+</body></html>

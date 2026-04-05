@@ -1,0 +1,21 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<a id="ejemploenlace">Hipervínculo</a>
+<input type="button" id="boton" value="Mi página">
+
+<script>
+    function enlazarMiPagina() {
+        const enlace = document.getElementById("ejemploenlace");
+        enlace.href = "http://darwin.50webs.com";
+    }
+
+    document.getElementById("boton").addEventListener("click", enlazarMiPagina);
+</script>
+
+</body>
+</html>

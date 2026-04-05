@@ -1,0 +1,26 @@
+﻿
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<div id="cajaejemplo">
+    <input type="button" id="btnCambiar" value="Cambiar fondo">
+</div>
+
+<script>
+    function cambiarFondo() {
+        const caja = document.getElementById("cajaejemplo");
+        caja.style.backgroundColor = "green";
+        caja.style.height = "100px";
+        caja.style.width = "50%";
+        caja.style.border = "1px solid black";
+    }
+
+    document.getElementById("btnCambiar").addEventListener("click", cambiarFondo);
+</script>
+
+</body>
+</html>
