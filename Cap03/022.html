@@ -1,0 +1,13 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Ciclo while creciente aumentando el doble del anterior
+let cont = 1;
+let salida = "";
+do {
+	salida += cont + ", ";
+	cont *= 2;
+} while (cont <= 5000);
+document.getElementById("salida").innerHTML = salida;
+//Resultado:1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096
+</script></body></html>

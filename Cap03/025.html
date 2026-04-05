@@ -1,0 +1,11 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Ciclo for creciente, se detiene en 50
+let salida = "";
+for (let cont = 1; cont <= 100; cont++) {
+	salida += cont + ", ";
+	if (cont >= 50) break; //Sale del ciclo
+}
+document.getElementById("salida").innerHTML = salida;
+</script></body></html>

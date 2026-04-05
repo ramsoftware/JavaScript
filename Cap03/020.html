@@ -1,0 +1,12 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Ciclo do-while creciente de 3 en 3
+let cont = 0;
+let salida = "";
+do {
+	salida += cont + ", ";	
+	cont += 3;
+} while (cont <= 300);
+document.getElementById("salida").innerHTML = salida;
+</script></body></html>

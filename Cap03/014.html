@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+<p id="salida"></p>
+<script>
+//Ciclo while decreciente
+let salida = "";
+
+let cont = 4096;
+while (cont >= 1) {
+	salida += cont + ", ";
+    cont /= 2;
+}
+
+document.getElementById("salida").innerHTML = salida;
+//Resultado: 4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1,
+</script>
+</body></html>

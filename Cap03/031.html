@@ -1,0 +1,14 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Ciclos anidados
+let salida = "";
+for (let x = 1; x <= 3; x++) {
+	for (let y = 45; y <= 50; y++) {
+		for (let z = 7; z <= 9; z++) {
+			salida += x + ", " + y + ", " + z + "<br>";
+		}
+	}
+}
+document.getElementById("salida").innerHTML = salida;
+</script></body></html>

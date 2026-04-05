@@ -1,0 +1,19 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Saliendo de ciclos anidados. Uso de etiquetas.
+let salida = "";
+saliendo:
+	for (let x = 1; x <= 3; x++) {
+		for (let y = 45; y <= 50; y++) {
+			for (let z = 7; z <= 9; z++) {
+				salida += x + ", " + y + ", " + z + "<br>";
+				if (z === 8) break saliendo; //Sale de todos los ciclos
+			}
+		}
+	}
+document.getElementById("salida").innerHTML = salida;
+/* Resultado:
+1;45;7
+1;45;8 */
+</script></body></html>

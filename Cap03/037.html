@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+/* Distribución Triangular. Generar una variable aleatoria con valor mínimo A,
+	 valor más probable B y valor máximo C
+	 Si r < (B-A)/(C-A)
+		Variable = A + raizcuadrada(r*(C-A)*(B-A))
+	 de lo contrario
+		Variable = C - raizcuadrada((1-r)*(C-A)*(C-B))
+	 */
+let A = 150;
+let B = 190;
+let C = 230;
+let variable = 0;
+let salida = "";
+for (let cont = 1; cont <= 100; cont++) {
+	let r = Math.random();
+	if (r < (B - A) / (C - A))
+		variable = A + Math.sqrt(r * (C - A) * (B - A));
+	else
+		variable = C - Math.sqrt((1 - r) * (C - A) * (C - B));
+	salida += variable + ", ";
+}
+document.getElementById("salida").innerHTML = salida;
+</script></body></html>

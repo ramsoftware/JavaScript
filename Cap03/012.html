@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+<p id="salida"></p>
+<script>
+//Ciclo while creciente de 10 en 10. Se detiene antes de 500
+let salida = "";
+
+let cont = 0;
+while (cont < 500) {
+	salida += cont + ", ";
+    cont+=10;
+}
+
+document.getElementById("salida").innerHTML = salida;
+</script>
+</body></html>

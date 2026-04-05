@@ -1,0 +1,13 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Ciclo do-while creciente. Sale cuando cont sea 50
+let cont = 1;
+let salida = "";
+do {
+	salida += cont + ", ";
+	cont++;
+	if (cont >= 50) break; //Sale del ciclo
+} while (cont <= 100);
+document.getElementById("salida").innerHTML = salida;
+</script></body></html>

@@ -1,0 +1,13 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Ciclo for creciente, se salta los pares
+let salida = "";
+for (let cont = 1; cont <= 10; cont++) {
+	//Si es par, salta a la siguiente iteración
+	if (cont % 2 === 0) continue;
+	salida += cont + ", ";
+}
+document.getElementById("salida").innerHTML = salida;
+//Resultado: 1, 3, 5, 7, 9,
+</script></body></html>
