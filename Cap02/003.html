@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+
+  <script>
+    let ladoA = parseInt(prompt("Lado A:"));
+    let ladoB = parseInt(prompt("Lado B:"));
+    let ladoC = parseInt(prompt("Lado C:"));
+
+    let salida = "";
+
+    if (ladoA === ladoB && ladoB === ladoC) {
+      salida += "Es equilátero";
+    } else if (ladoA !== ladoB && ladoA !== ladoC && ladoB !== ladoC) {
+      salida += "Es escaleno";
+    } else {
+      salida += "Es isósceles";
+    }
+
+    document.getElementById("salida").innerHTML = salida;
+  </script>
+</body></html>

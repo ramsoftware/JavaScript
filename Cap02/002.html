@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+
+  <script>
+    // Si condicional. Uso de else if
+    let valA = parseFloat(prompt("valor A: "));
+    let valB = parseFloat(prompt("valor B: "));
+
+    let salida = "";
+
+    if (valA > valB) {
+      salida += valA + " es mayor que " + valB;
+    } else if (valA === valB) {
+      salida += valA + " es igual que " + valB;
+    } else {
+      salida += valA + " es menor que " + valB;
+    }
+
+    document.getElementById("salida").innerHTML = salida;
+  </script>
+</body></html>

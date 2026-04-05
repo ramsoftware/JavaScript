@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+
+  <script>
+    // Tipo de triángulo
+    let ladoA = parseInt(prompt("Lado A:"));
+    let ladoB = parseInt(prompt("Lado B:"));
+    let ladoC = parseInt(prompt("Lado C:"));
+
+    let salida = "";
+
+    if (ladoA === ladoB && ladoB === ladoC) {
+      salida += "Es equilátero";
+    } else if (ladoA === ladoB || ladoB === ladoC || ladoA === ladoC) {
+      salida += "Es isósceles";
+    } else {
+      salida += "Es escaleno";
+    }
+
+    document.getElementById("salida").innerHTML = salida;
+  </script>
+</body></html>

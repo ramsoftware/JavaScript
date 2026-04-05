@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html><html lang="es"><body>
+  <p id="salida"></p>
+
+  <script>
+    // Uso del switch
+    let valor = parseInt(prompt("Digite un valor"));
+
+    let salida = "";
+
+    switch (valor) {
+      case 0:
+        salida += "Escribió cero";
+        break;
+
+      case 1:
+        salida += "Digitó 1";
+        salida += "<br>Escribió uno";
+        salida += "<br>Registró uno";
+        break;
+
+      case 2:
+        salida += "Tecleó dos";
+        break;
+
+      case 3:
+        salida += "Presionó 3";
+        break;
+
+      default:
+        salida += "Ingresó otro valor";
+    }
+
+    document.getElementById("salida").innerHTML = salida;
+  </script>
+</body></html>
