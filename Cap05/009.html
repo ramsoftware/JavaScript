@@ -1,0 +1,18 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Ordena arreglos con valores alfanuméricos
+let lenguajes = [];
+lenguajes.push("Gómez");
+lenguajes.push("Ayala");
+lenguajes.push("Moreno");
+lenguajes.push("Ñañes");
+lenguajes.push("Ángulo");
+lenguajes.push("Zapata");
+
+document.getElementById("salida").innerHTML = "<b>Arreglo original:</b> " + lenguajes;
+
+lenguajes.sort(); //Ordena el arreglo en orden alfabético
+
+document.getElementById("salida").innerHTML += "<br><b>Arreglo ordenado:</b> " + lenguajes;
+</script></body></html>

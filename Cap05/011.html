@@ -1,0 +1,19 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Ordena en forma inversa un arreglo con valores alfanuméricos
+let lenguajes = [];
+lenguajes.push("Visual Basic .Net");
+lenguajes.push("PHP");
+lenguajes.push("JavaScript");
+lenguajes.push("Java");
+lenguajes.push("Object Pascal");
+lenguajes.push("C#");
+document.getElementById("salida").innerHTML = "<b>Arreglo original:</b> " + lenguajes;
+
+lenguajes.sort(); //Ordena el arreglo en orden alfabético
+document.getElementById("salida").innerHTML += "<br><b>Arreglo ordenado:</b> " + lenguajes;
+
+lenguajes.reverse(); //Invierte el arreglo
+document.getElementById("salida").innerHTML += "<br><b>Arreglo invertido:</b> " + lenguajes;
+</script></body></html>

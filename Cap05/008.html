@@ -1,0 +1,18 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Operación con vectores: Buscar el mayor valor
+const valores = [];
+valores.push(15000);
+valores.push(18000);
+valores.push(34000);
+valores.push(17000);
+valores.push(8000);
+
+let mayor = valores[0]; //Inicia con el primer elemento como el mayor
+for (let cont = 0; cont < valores.length; cont++) {
+	if (valores[cont] > mayor) mayor = valores[cont];
+}
+
+document.getElementById("salida").innerHTML = "Mayor es: " + mayor;
+</script></body></html>

@@ -1,0 +1,18 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Ordenar de menor a mayor el arreglo con valores numéricos
+let valores = [];
+valores.push(19000);
+valores.push(18000);
+valores.push(34000);
+valores.push(27000);
+valores.push(8000);
+valores.push(9000);
+document.getElementById("salida").innerHTML = "Arreglo numérico original: " + valores;
+
+valores.sort(function (a, b) {
+	return a - b
+}); //Ordena el arreglo
+document.getElementById("salida").innerHTML += "<br>Arreglo numérico ordenado: " + valores;
+</script></body></html>

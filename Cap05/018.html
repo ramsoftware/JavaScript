@@ -1,0 +1,22 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+let letras = ['r', 'v', 'e', 'g', 't', 'u', 'd', 'f', 'f', 'y', 'v'];
+document.getElementById("salida").innerHTML = "Original: " + letras + "<br>";
+OrdenarSeleccion(letras);
+document.getElementById("salida").innerHTML += "Ordenado: " + letras + "<br>";
+
+//Ordenación por selección
+function OrdenarSeleccion(arreglo) {
+	for (let i = 0; i < arreglo.length - 1; i++) {
+		let tmp = i;
+		for (let j = i + 1; j < arreglo.length; j++)
+			if (arreglo[j] < arreglo[tmp])
+				tmp = j;
+
+		let temporal = arreglo[tmp];
+		arreglo[tmp] = arreglo[i];
+		arreglo[i] = temporal;
+	}
+}
+</script></body></html>
