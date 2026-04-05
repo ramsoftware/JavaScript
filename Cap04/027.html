@@ -1,0 +1,11 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Funciones que reciben distinto número de parámetros
+FuncionDinamica("paso", "varios", "argumentos", 7, 1, "numeros", 3, "y texto");
+
+function FuncionDinamica() {
+	for (let cont = 0; cont < arguments.length; cont++)
+		document.getElementById("salida").innerHTML += arguments[cont] + "<br>";
+}
+</script></body></html>

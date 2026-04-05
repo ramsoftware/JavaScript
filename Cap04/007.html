@@ -1,0 +1,21 @@
+﻿<!DOCTYPE HTML><html lang="es"><head><script src="Libreria.js"></script></head><body>
+<p id="salida"></p>
+<script>
+let minimo = 4000;
+let maximo = 7000;
+
+//Cantidad de números primos que no tengan el número 3 en sus cifras
+let contar = 0;
+for (let num = minimo; num <= maximo; num++) {
+	if (cifrashalladas(num, 3) === 0 && EsPrimo(num)) {
+		contar = contar + 1
+	}
+}
+Imprime(minimo, maximo, "Cantidad de números primos que no tengan el número 3 en sus cifras", contar);
+
+
+//Imprime el resultado en el navegador
+function Imprime(minimo, maximo, texto, resultado) {
+	document.getElementById("salida").innerHTML = "Entre " + minimo + " y " + maximo + ". " + texto + ": " + resultado + "<br>";
+}
+</script></body></html>

@@ -1,0 +1,11 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+// Función recursiva. Suma las cifras de un número
+function sumacifras(num) {
+	if (num < 10) return num;
+	return num % 10 + sumacifras(Math.floor(num / 10));
+}
+
+document.getElementById("salida").innerHTML = "cifras suman: " + sumacifras(701);
+</script></body></html>

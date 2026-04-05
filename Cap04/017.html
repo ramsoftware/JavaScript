@@ -1,0 +1,24 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+//Ámbito (scope) de una variable
+let valor = 17;
+
+//Imprime 17
+document.getElementById("salida").innerHTML = "<br>Valor antes de la función es: " + valor;
+
+prueba(valor); //Llama a la función enviando por parámetro el valor
+
+//Imprime 17
+document.getElementById("salida").innerHTML = "<br>Valor después de la función es: " + valor;
+
+function prueba(valor) {
+	//Imprime 17
+	document.getElementById("salida").innerHTML = "<br>Valor dentro de la función es: " + valor;
+
+	valor = 8906;
+
+	//Imprime 8906
+	document.getElementById("salida").innerHTML = "<br>Valor variable interna: " + valor;
+}
+</script></body></html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE HTML><html lang="es"><head><script src="Libreria.js"></script></head><body>
+<p id="salida"></p>
+<script>
+let minimo = 1000;
+let maximo = 9999;
+
+//Cantidad de números palíndromos que tengan mínimo dos veces el 7 en sus cifras
+let contar = 0;
+for (let num = minimo; num <= maximo; num++) {
+	if (cifrashalladas(num, 7) >= 2 && EsPalindromo(num)) {
+		contar = contar + 1
+	}
+}
+Imprime(minimo, maximo, "Cantidad de números palíndromos que tengan mínimo dos veces el 7 en sus cifras", contar);
+
+
+//Imprime el resultado en el navegador
+function Imprime(minimo, maximo, texto, resultado) {
+	document.getElementById("salida").innerHTML = "Entre " + minimo + " y " + maximo + ". " + texto + ": " + resultado + "<br>";
+}
+</script></body></html>

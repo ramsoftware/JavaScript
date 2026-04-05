@@ -1,0 +1,11 @@
+﻿<!DOCTYPE HTML><html lang="es"><head></head><body>
+<p id="salida"></p>
+<script>
+document.getElementById("salida").innerHTML = "Imprimirá en 3 segundos:";
+setTimeout(Imprime, 3000); //3000ms = 3segundos
+
+//Esta función ejecutará en 3 segundos
+function Imprime() {
+	document.getElementById("salida").innerHTML += "<br>Esta es una prueba";
+}
+</script></body></html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE HTML><html lang="es"><head><script src="Libreria.js"></script></head><body>
+<p id="salida"></p>
+<script>
+let minimo = 7700;
+let maximo = 8000;
+
+//Cantidad de números que la suma de sus cifras es impar y al menos tenga una vez el número 7
+let contar = 0;
+for (let num = minimo; num <= maximo; num++) {
+	if (EsImpar(SumaCifras(num)) && cifrashalladas(num, 7) >= 1) {
+		contar = contar + 1
+	}
+}
+Imprime(minimo, maximo, "Cantidad de números que la suma de sus cifras es impar y al menos tenga una vez el número 7", contar);
+
+
+//Imprime el resultado en el navegador
+function Imprime(minimo, maximo, texto, resultado) {
+	document.getElementById("salida").innerHTML = "Entre " + minimo + " y " + maximo + ". " + texto + ": " + resultado + "<br>";
+}
+</script></body></html>

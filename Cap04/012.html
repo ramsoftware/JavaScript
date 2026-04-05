@@ -1,0 +1,21 @@
+﻿<!DOCTYPE HTML><html lang="es"><head><script src="Libreria.js"></script></head><body>
+<p id="salida"></p>
+<script>
+let minimo = 10;
+let maximo = 999999;
+
+//Cantidad de números primos y a su vez palíndromos
+let contar = 0;
+for (let num = minimo; num <= maximo; num++) {
+	if (EsPrimo(num) && EsPalindromo(num)) {
+		contar = contar + 1
+	}
+}
+Imprime(minimo, maximo, "Cantidad de números primos y a su vez palíndromos", contar);
+
+
+//Imprime el resultado en el navegador
+function Imprime(minimo, maximo, texto, resultado) {
+	document.getElementById("salida").innerHTML = "Entre " + minimo + " y " + maximo + ". " + texto + ": " + resultado + "<br>";
+}
+</script></body></html>

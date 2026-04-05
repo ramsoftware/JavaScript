@@ -1,0 +1,21 @@
+﻿<!DOCTYPE HTML><html lang="es"><head><script src="Libreria.js"></script></head><body>
+<p id="salida"></p>
+<script>
+let minimo = 5000;
+let maximo = 9000;
+
+//Cantidad de números que tengan solo cifras pares y al menos un número 4
+let contar = 0;
+for (let num = minimo; num <= maximo; num++) {
+	if (cifrashalladas(num, 4) >= 1 && TodasCifrasPares(num)) {
+		contar = contar + 1
+	}
+}
+Imprime(minimo, maximo, "Cantidad de números que tengan solo cifras pares y al menos un número 4", contar);
+
+
+//Imprime el resultado en el navegador
+function Imprime(minimo, maximo, texto, resultado) {
+	document.getElementById("salida").innerHTML = "Entre " + minimo + " y " + maximo + ". " + texto + ": " + resultado + "<br>";
+}
+</script></body></html>
